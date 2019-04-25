@@ -26,23 +26,23 @@ public class UserController {
     @CrossOrigin
     public String login(HttpServletRequest request){
 
-        String s = "SSM vue前后端框架搭建成功";
-        return s;
-//        String userID = request.getParameter("userID");
-//        String userPassword = request.getParameter("userPassword");
-//        User user = new User();
-//        user.setUserId(Integer.parseInt(userID));
-//        user.setUserPassword(userPassword);
-//        User u = userService.selectByUser(user);
+//        String s = "SSM vue前后端框架搭建成功";
+//        return s;
+        String userID = request.getParameter("userID");
+        String userPassword = request.getParameter("userPassword");
+        User user = new User();
+        user.setUserId(Integer.parseInt(userID));
+        user.setUserPassword(userPassword);
+        User u = userService.selectByUser(user);
 //        return u;
 
 
-//        if(u == null){
-////            request.getSession().setAttribute("userID",userID);
-//            return "redirect:/user/loginSuccess";
-//        }else{
-//            return "redirect:/user/loginFaild";
-//        }
+        if(u == null){
+//            request.getSession().setAttribute("userID",userID);
+            return "redirect:/user/loginSuccess";
+        }else{
+            return "redirect:/user/loginFaild";
+        }
     }
 
     @RequestMapping("/loginFaild")

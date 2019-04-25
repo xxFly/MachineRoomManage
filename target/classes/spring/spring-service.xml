@@ -12,6 +12,13 @@
     <!-- 扫描service包下所有使用注解的类型 -->
     <context:component-scan base-package="cn.edu.bupt.bnrc.service" />
 
+    <!-- rabbitmq -->
+    <import resource="classpath*:rabbitMQ.xml" />
+
+    <context:component-scan base-package="cn.edu.bupt.bnrc.controller">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
     <!-- 配置事务管理器 -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

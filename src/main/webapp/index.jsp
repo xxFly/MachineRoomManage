@@ -43,6 +43,8 @@
 <%--    <a href="${path}/user/login">去登陆</a>--%>
     <div><a href="${path }/user/login"><h3>登录</h3></a></div>
     <div><a href="${path }/user/register"><h3>注册</h3></a></div>
+    <div><a href="${path }/rabbit/main"><h3>rabbitMain</h3></a></div>
+    <div><a href="${path }/rabbit/doValid"><h3>rabbitDo</h3></a></div>
 </div>
 </body>
 </html>
