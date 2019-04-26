@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.edu.bupt.bnrc.dao.EquipmentCabinetMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.EquipmentCabinet" >
-    <id column="equip_cab_id" property="equipCabId" jdbcType="INTEGER" />
-    <id column="mr_id" property="mrId" jdbcType="INTEGER" />
+    <id column="equip_cab_id" property="equipCabId" jdbcType="VARCHAR" />
+    <id column="mr_id" property="mrId" jdbcType="VARCHAR" />
     <result column="equip_cab_name" property="equipCabName" jdbcType="VARCHAR" />
     <result column="equip_cab_length" property="equipCabLength" jdbcType="VARCHAR" />
     <result column="equip_cab_width" property="equipCabWidth" jdbcType="VARCHAR" />
@@ -92,13 +92,13 @@
     select 
     <include refid="Base_Column_List" />
     from equipment_cabinet
-    where equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentCabinetKey" >
     delete from equipment_cabinet
-    where equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentCabinetExample" >
     delete from equipment_cabinet
@@ -111,7 +111,7 @@
       equip_cab_length, equip_cab_width, equip_cab_height, 
       equip_cab_unit_num, equip_cab_location, equip_cab_remark
       )
-    values (#{equipCabId,jdbcType=INTEGER}, #{mrId,jdbcType=INTEGER}, #{equipCabName,jdbcType=VARCHAR}, 
+    values (#{equipCabId,jdbcType=VARCHAR}, #{mrId,jdbcType=VARCHAR}, #{equipCabName,jdbcType=VARCHAR}, 
       #{equipCabLength,jdbcType=VARCHAR}, #{equipCabWidth,jdbcType=VARCHAR}, #{equipCabHeight,jdbcType=VARCHAR}, 
       #{equipCabUnitNum,jdbcType=VARCHAR}, #{equipCabLocation,jdbcType=VARCHAR}, #{equipCabRemark,jdbcType=VARCHAR}
       )
@@ -149,10 +149,10 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="equipCabId != null" >
-        #{equipCabId,jdbcType=INTEGER},
+        #{equipCabId,jdbcType=VARCHAR},
       </if>
       <if test="mrId != null" >
-        #{mrId,jdbcType=INTEGER},
+        #{mrId,jdbcType=VARCHAR},
       </if>
       <if test="equipCabName != null" >
         #{equipCabName,jdbcType=VARCHAR},
@@ -187,10 +187,10 @@
     update equipment_cabinet
     <set >
       <if test="record.equipCabId != null" >
-        equip_cab_id = #{record.equipCabId,jdbcType=INTEGER},
+        equip_cab_id = #{record.equipCabId,jdbcType=VARCHAR},
       </if>
       <if test="record.mrId != null" >
-        mr_id = #{record.mrId,jdbcType=INTEGER},
+        mr_id = #{record.mrId,jdbcType=VARCHAR},
       </if>
       <if test="record.equipCabName != null" >
         equip_cab_name = #{record.equipCabName,jdbcType=VARCHAR},
@@ -220,8 +220,8 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update equipment_cabinet
-    set equip_cab_id = #{record.equipCabId,jdbcType=INTEGER},
-      mr_id = #{record.mrId,jdbcType=INTEGER},
+    set equip_cab_id = #{record.equipCabId,jdbcType=VARCHAR},
+      mr_id = #{record.mrId,jdbcType=VARCHAR},
       equip_cab_name = #{record.equipCabName,jdbcType=VARCHAR},
       equip_cab_length = #{record.equipCabLength,jdbcType=VARCHAR},
       equip_cab_width = #{record.equipCabWidth,jdbcType=VARCHAR},
@@ -258,8 +258,8 @@
         equip_cab_remark = #{equipCabRemark,jdbcType=VARCHAR},
       </if>
     </set>
-    where equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentCabinet" >
     update equipment_cabinet
@@ -270,7 +270,7 @@
       equip_cab_unit_num = #{equipCabUnitNum,jdbcType=VARCHAR},
       equip_cab_location = #{equipCabLocation,jdbcType=VARCHAR},
       equip_cab_remark = #{equipCabRemark,jdbcType=VARCHAR}
-    where equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </update>
 </mapper>

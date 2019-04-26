@@ -114,52 +114,62 @@ public class EquipmentCabinetExample {
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdEqualTo(Integer value) {
+        public Criteria andEquipCabIdEqualTo(String value) {
             addCriterion("equip_cab_id =", value, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdNotEqualTo(Integer value) {
+        public Criteria andEquipCabIdNotEqualTo(String value) {
             addCriterion("equip_cab_id <>", value, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdGreaterThan(Integer value) {
+        public Criteria andEquipCabIdGreaterThan(String value) {
             addCriterion("equip_cab_id >", value, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdGreaterThanOrEqualTo(Integer value) {
+        public Criteria andEquipCabIdGreaterThanOrEqualTo(String value) {
             addCriterion("equip_cab_id >=", value, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdLessThan(Integer value) {
+        public Criteria andEquipCabIdLessThan(String value) {
             addCriterion("equip_cab_id <", value, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdLessThanOrEqualTo(Integer value) {
+        public Criteria andEquipCabIdLessThanOrEqualTo(String value) {
             addCriterion("equip_cab_id <=", value, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdIn(List<Integer> values) {
+        public Criteria andEquipCabIdLike(String value) {
+            addCriterion("equip_cab_id like", value, "equipCabId");
+            return (Criteria) this;
+        }
+
+        public Criteria andEquipCabIdNotLike(String value) {
+            addCriterion("equip_cab_id not like", value, "equipCabId");
+            return (Criteria) this;
+        }
+
+        public Criteria andEquipCabIdIn(List<String> values) {
             addCriterion("equip_cab_id in", values, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdNotIn(List<Integer> values) {
+        public Criteria andEquipCabIdNotIn(List<String> values) {
             addCriterion("equip_cab_id not in", values, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdBetween(Integer value1, Integer value2) {
+        public Criteria andEquipCabIdBetween(String value1, String value2) {
             addCriterion("equip_cab_id between", value1, value2, "equipCabId");
             return (Criteria) this;
         }
 
-        public Criteria andEquipCabIdNotBetween(Integer value1, Integer value2) {
+        public Criteria andEquipCabIdNotBetween(String value1, String value2) {
             addCriterion("equip_cab_id not between", value1, value2, "equipCabId");
             return (Criteria) this;
         }
@@ -174,52 +184,62 @@ public class EquipmentCabinetExample {
             return (Criteria) this;
         }
 
-        public Criteria andMrIdEqualTo(Integer value) {
+        public Criteria andMrIdEqualTo(String value) {
             addCriterion("mr_id =", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdNotEqualTo(Integer value) {
+        public Criteria andMrIdNotEqualTo(String value) {
             addCriterion("mr_id <>", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdGreaterThan(Integer value) {
+        public Criteria andMrIdGreaterThan(String value) {
             addCriterion("mr_id >", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdGreaterThanOrEqualTo(Integer value) {
+        public Criteria andMrIdGreaterThanOrEqualTo(String value) {
             addCriterion("mr_id >=", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdLessThan(Integer value) {
+        public Criteria andMrIdLessThan(String value) {
             addCriterion("mr_id <", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdLessThanOrEqualTo(Integer value) {
+        public Criteria andMrIdLessThanOrEqualTo(String value) {
             addCriterion("mr_id <=", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdIn(List<Integer> values) {
+        public Criteria andMrIdLike(String value) {
+            addCriterion("mr_id like", value, "mrId");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrIdNotLike(String value) {
+            addCriterion("mr_id not like", value, "mrId");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrIdIn(List<String> values) {
             addCriterion("mr_id in", values, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdNotIn(List<Integer> values) {
+        public Criteria andMrIdNotIn(List<String> values) {
             addCriterion("mr_id not in", values, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdBetween(Integer value1, Integer value2) {
+        public Criteria andMrIdBetween(String value1, String value2) {
             addCriterion("mr_id between", value1, value2, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdNotBetween(Integer value1, Integer value2) {
+        public Criteria andMrIdNotBetween(String value1, String value2) {
             addCriterion("mr_id not between", value1, value2, "mrId");
             return (Criteria) this;
         }

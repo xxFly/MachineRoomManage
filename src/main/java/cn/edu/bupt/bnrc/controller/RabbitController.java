@@ -2,6 +2,7 @@ package cn.edu.bupt.bnrc.controller;
 
 import cn.edu.bupt.bnrc.service.impl.MessageSender;
 import cn.edu.bupt.bnrc.service.impl.MqTestImpl;
+import cn.edu.bupt.bnrc.service.interfaces.MqTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class RabbitController {
     // 注入消息生产者
     @Autowired
-    private MqTestImpl mqTest;
+    private MqTest mqTest = new MqTestImpl();
 
     private Logger logger = LoggerFactory.getLogger(MessageSender.class);
 
@@ -24,7 +25,7 @@ public class RabbitController {
         System.out.println("==============已发送main消息");
         for(int i = 0; i < 5; i++){
             String str = Integer.toString(i);
-            mqTest.sendMessage("main"+str);
+//            mqTest.sendMessage("main"+str);
 
         }
         return "main";

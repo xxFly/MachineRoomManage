@@ -1,23 +1,23 @@
 package cn.edu.bupt.bnrc.pojo;
 
 public class MachineroomKey {
-    private Integer mrId;
+    private String mrId;
 
-    private Integer userId;
+    private String userId;
 
-    public Integer getMrId() {
+    public String getMrId() {
         return mrId;
     }
 
-    public void setMrId(Integer mrId) {
-        this.mrId = mrId;
+    public void setMrId(String mrId) {
+        this.mrId = mrId == null ? null : mrId.trim();
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 }

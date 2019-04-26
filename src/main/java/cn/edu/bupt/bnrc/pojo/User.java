@@ -1,7 +1,9 @@
 package cn.edu.bupt.bnrc.pojo;
 
-public class User {
-    private Integer userId;
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private String userId;
 
     private String userName;
 
@@ -24,7 +26,7 @@ public class User {
     public User() {
     }
 
-    public User(Integer userId, String userName, String userPassword, String userEmail, String userPhone, String userHeadimage, String userSignature, String userAuthority, String userLastlogin, String userRemark) {
+    public User(String userId, String userName, String userPassword, String userEmail, String userPhone, String userHeadimage, String userSignature, String userAuthority, String userLastlogin, String userRemark) {
         this.userId = userId;
         this.userName = userName;
         this.userPassword = userPassword;
@@ -37,12 +39,28 @@ public class User {
         this.userRemark = userRemark;
     }
 
-    public Integer getUserId() {
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", userPhone='" + userPhone + '\'' +
+                ", userHeadimage='" + userHeadimage + '\'' +
+                ", userSignature='" + userSignature + '\'' +
+                ", userAuthority='" + userAuthority + '\'' +
+                ", userLastlogin='" + userLastlogin + '\'' +
+                ", userRemark='" + userRemark + '\'' +
+                '}';
+    }
+
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     public String getUserName() {

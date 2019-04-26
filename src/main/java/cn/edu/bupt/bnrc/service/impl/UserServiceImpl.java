@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int deleteUserById(Integer id) {
+    public int deleteUserById(String id) {
         return userMapper.deleteByPrimaryKey(id);
     }
 

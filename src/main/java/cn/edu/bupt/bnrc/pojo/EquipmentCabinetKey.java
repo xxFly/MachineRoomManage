@@ -1,23 +1,23 @@
 package cn.edu.bupt.bnrc.pojo;
 
 public class EquipmentCabinetKey {
-    private Integer equipCabId;
+    private String equipCabId;
 
-    private Integer mrId;
+    private String mrId;
 
-    public Integer getEquipCabId() {
+    public String getEquipCabId() {
         return equipCabId;
     }
 
-    public void setEquipCabId(Integer equipCabId) {
-        this.equipCabId = equipCabId;
+    public void setEquipCabId(String equipCabId) {
+        this.equipCabId = equipCabId == null ? null : equipCabId.trim();
     }
 
-    public Integer getMrId() {
+    public String getMrId() {
         return mrId;
     }
 
-    public void setMrId(Integer mrId) {
-        this.mrId = mrId;
+    public void setMrId(String mrId) {
+        this.mrId = mrId == null ? null : mrId.trim();
     }
 }

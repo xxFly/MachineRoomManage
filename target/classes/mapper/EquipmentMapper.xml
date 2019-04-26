@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.edu.bupt.bnrc.dao.EquipmentMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.Equipment" >
-    <id column="equip_id" property="equipId" jdbcType="INTEGER" />
-    <id column="equip_cab_id" property="equipCabId" jdbcType="INTEGER" />
-    <id column="mr_id" property="mrId" jdbcType="INTEGER" />
+    <id column="equip_id" property="equipId" jdbcType="VARCHAR" />
+    <id column="equip_cab_id" property="equipCabId" jdbcType="VARCHAR" />
+    <id column="mr_id" property="mrId" jdbcType="VARCHAR" />
     <result column="equip_name" property="equipName" jdbcType="VARCHAR" />
     <result column="equip_length" property="equipLength" jdbcType="VARCHAR" />
     <result column="equip_width" property="equipWidth" jdbcType="VARCHAR" />
@@ -96,15 +96,15 @@
     select 
     <include refid="Base_Column_List" />
     from equipment
-    where equip_id = #{equipId,jdbcType=INTEGER}
-      and equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_id = #{equipId,jdbcType=VARCHAR}
+      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentKey" >
     delete from equipment
-    where equip_id = #{equipId,jdbcType=INTEGER}
-      and equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_id = #{equipId,jdbcType=VARCHAR}
+      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentExample" >
     delete from equipment
@@ -118,7 +118,7 @@
       equip_height, equip_brand, equip_version, 
       equip_location, equip_picture, equip_type, 
       equip_remark)
-    values (#{equipId,jdbcType=INTEGER}, #{equipCabId,jdbcType=INTEGER}, #{mrId,jdbcType=INTEGER}, 
+    values (#{equipId,jdbcType=VARCHAR}, #{equipCabId,jdbcType=VARCHAR}, #{mrId,jdbcType=VARCHAR}, 
       #{equipName,jdbcType=VARCHAR}, #{equipLength,jdbcType=VARCHAR}, #{equipWidth,jdbcType=VARCHAR}, 
       #{equipHeight,jdbcType=VARCHAR}, #{equipBrand,jdbcType=VARCHAR}, #{equipVersion,jdbcType=VARCHAR}, 
       #{equipLocation,jdbcType=VARCHAR}, #{equipPicture,jdbcType=VARCHAR}, #{equipType,jdbcType=VARCHAR}, 
@@ -169,13 +169,13 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="equipId != null" >
-        #{equipId,jdbcType=INTEGER},
+        #{equipId,jdbcType=VARCHAR},
       </if>
       <if test="equipCabId != null" >
-        #{equipCabId,jdbcType=INTEGER},
+        #{equipCabId,jdbcType=VARCHAR},
       </if>
       <if test="mrId != null" >
-        #{mrId,jdbcType=INTEGER},
+        #{mrId,jdbcType=VARCHAR},
       </if>
       <if test="equipName != null" >
         #{equipName,jdbcType=VARCHAR},
@@ -219,13 +219,13 @@
     update equipment
     <set >
       <if test="record.equipId != null" >
-        equip_id = #{record.equipId,jdbcType=INTEGER},
+        equip_id = #{record.equipId,jdbcType=VARCHAR},
       </if>
       <if test="record.equipCabId != null" >
-        equip_cab_id = #{record.equipCabId,jdbcType=INTEGER},
+        equip_cab_id = #{record.equipCabId,jdbcType=VARCHAR},
       </if>
       <if test="record.mrId != null" >
-        mr_id = #{record.mrId,jdbcType=INTEGER},
+        mr_id = #{record.mrId,jdbcType=VARCHAR},
       </if>
       <if test="record.equipName != null" >
         equip_name = #{record.equipName,jdbcType=VARCHAR},
@@ -264,9 +264,9 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update equipment
-    set equip_id = #{record.equipId,jdbcType=INTEGER},
-      equip_cab_id = #{record.equipCabId,jdbcType=INTEGER},
-      mr_id = #{record.mrId,jdbcType=INTEGER},
+    set equip_id = #{record.equipId,jdbcType=VARCHAR},
+      equip_cab_id = #{record.equipCabId,jdbcType=VARCHAR},
+      mr_id = #{record.mrId,jdbcType=VARCHAR},
       equip_name = #{record.equipName,jdbcType=VARCHAR},
       equip_length = #{record.equipLength,jdbcType=VARCHAR},
       equip_width = #{record.equipWidth,jdbcType=VARCHAR},
@@ -315,9 +315,9 @@
         equip_remark = #{equipRemark,jdbcType=VARCHAR},
       </if>
     </set>
-    where equip_id = #{equipId,jdbcType=INTEGER}
-      and equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_id = #{equipId,jdbcType=VARCHAR}
+      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.Equipment" >
     update equipment
@@ -331,8 +331,8 @@
       equip_picture = #{equipPicture,jdbcType=VARCHAR},
       equip_type = #{equipType,jdbcType=VARCHAR},
       equip_remark = #{equipRemark,jdbcType=VARCHAR}
-    where equip_id = #{equipId,jdbcType=INTEGER}
-      and equip_cab_id = #{equipCabId,jdbcType=INTEGER}
-      and mr_id = #{mrId,jdbcType=INTEGER}
+    where equip_id = #{equipId,jdbcType=VARCHAR}
+      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
+      and mr_id = #{mrId,jdbcType=VARCHAR}
   </update>
 </mapper>

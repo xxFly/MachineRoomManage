@@ -9,7 +9,7 @@ public interface UserService {
 
     int insertUser(User user);
 
-    int deleteUserById(Integer id);
+    int deleteUserById(String id);
 
     int updateUser(User user);
 

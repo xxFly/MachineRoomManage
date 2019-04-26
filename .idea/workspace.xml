@@ -9,31 +9,81 @@
   <component name="ChangeListManager">
     <list default="true" id="90a1fee7-36ec-482e-bcfb-98e454af372e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/RabbitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/RabbitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/ChrisConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/UserExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/UserExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/ShijiConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/MqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/MqTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/EquipmentCabinetMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/EquipmentCabinetMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/EquipmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/EquipmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/MachineroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/MachineroomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/controller/RabbitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/controller/RabbitController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/EquipmentKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/MachineroomKey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/ChrisConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/UserExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/pojo/UserExample$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/MessageConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/MessageConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/ShijiConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/MqTestImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/MqTestImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/interfaces/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/service/interfaces/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EquipmentCabinetMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EquipmentCabinetMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EquipmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EquipmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MachineroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/MachineroomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/controller/RabbitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/controller/RabbitController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/EquipmentKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/MachineroomKey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/ChrisConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/UserExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/UserExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/pojo/UserExample$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/MessageConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/MessageConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/ShijiConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/MqTestImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/MqTestImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/interfaces/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/service/interfaces/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/jsp/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/jsp/user/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/jsp/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/jsp/user/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/EquipmentCabinetMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/EquipmentCabinetMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/EquipmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/EquipmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/MachineroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/MachineroomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,49 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/MqTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/registerSucess.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="81">
+              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -115,8 +124,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="211">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/amqp/spring-amqp/1.3.5.RELEASE/spring-amqp-1.3.5.RELEASE.jar!/org/springframework/amqp/core/AmqpTemplate.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -124,29 +145,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="297">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-                <element signature="e#683#684#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="21" />
+            <state relative-caret-position="52">
+              <caret line="95" column="34" lean-forward="true" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!block;n#login#0;n#UserController#0" />
+                <element signature="n#!!block;n#loginFaild#0;n#UserController#0" />
+                <element signature="n#!!block;n#loginSuccess#0;n#UserController#0" />
+                <element signature="n#!!block;n#register#0;n#UserController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,17 +176,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="113">
+              <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/UserService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="301">
+              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,9 +239,10 @@
       <find>consumer receive message</find>
       <find>receive message</find>
       <find>dataSource</find>
-      <find>接收</find>
       <find>UserService</find>
       <find>insert</find>
+      <find>接收</find>
+      <find>select</find>
       <find>selectByUser</find>
     </findStrings>
   </component>
@@ -204,19 +257,21 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/mqTestImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageSender.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/spring/spring-service.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/rabbitMQ.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/RabbitController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/RabbitController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/MqTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp" />
       </list>
     </option>
   </component>
@@ -258,9 +313,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="344" />
-    <option name="y" value="26" />
-    <option name="width" value="1341" />
+    <option name="x" value="354" />
+    <option name="y" value="6" />
+    <option name="width" value="1321" />
     <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -382,8 +437,7 @@
               <item name="machineRoomManage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="machineRoomManage" type="b2602c69:ProjectViewProjectNode" />
@@ -391,6 +445,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="machineRoomManage" type="b2602c69:ProjectViewProjectNode" />
@@ -622,12 +677,12 @@
       <workItem from="1556089243190" duration="3201000" />
       <workItem from="1556101267190" duration="1632000" />
       <workItem from="1556156074563" duration="8928000" />
-      <workItem from="1556240289628" duration="4627000" />
+      <workItem from="1556240289628" duration="21685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37752000" />
+    <option name="totallyTimeSpent" value="54810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -639,10 +694,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="344" y="26" width="1341" height="1017" extended-state="0" />
-    <editor active="true" />
+    <frame x="354" y="6" width="1321" height="1017" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20686963" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23790643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -652,77 +706,35 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2446206" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8323896" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.13789238" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.11891279" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.50056624" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3295964" />
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3105381" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.12797283" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.12668161" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.1202577" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.19516003" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.3292789" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27088213" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.543722" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.13789238" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.11891279" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3295964" />
-      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3105381" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.12797283" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.1202577" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3292789" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/amqp/spring-amqp/1.3.5.RELEASE/spring-amqp-1.3.5.RELEASE.jar!/org/springframework/amqp/core/Message.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -779,31 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentCabinetKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/Equipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -825,13 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/amqp/spring-amqp/1.3.5.RELEASE/spring-amqp-1.3.5.RELEASE.jar!/org/springframework/amqp/core/AmqpTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -858,13 +842,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -930,113 +907,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/RabbitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/MqTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/registerSucess.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="216">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/amqp/spring-amqp/1.3.5.RELEASE/spring-amqp-1.3.5.RELEASE.jar!/org/springframework/amqp/core/Message.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/RabbitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/amqp/spring-amqp/1.3.5.RELEASE/spring-amqp-1.3.5.RELEASE.jar!/org/springframework/amqp/core/MessageListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/ObjectOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="239" column="11" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/Machineroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/MachineroomExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/Equipment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/EquipmentExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/MachineroomMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MessageConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/amqp/spring-amqp/1.3.5.RELEASE/spring-amqp-1.3.5.RELEASE.jar!/org/springframework/amqp/core/AmqpTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/MqTestImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/interfaces/MqTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="95" column="34" lean-forward="true" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!block;n#login#0;n#UserController#0" />
+            <element signature="n#!!block;n#loginFaild#0;n#UserController#0" />
+            <element signature="n#!!block;n#loginSuccess#0;n#UserController#0" />
+            <element signature="n#!!block;n#register#0;n#UserController#0" />
+          </folding>
         </state>
       </provider>
     </entry>

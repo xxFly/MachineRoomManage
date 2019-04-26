@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.edu.bupt.bnrc.dao.MachineroomMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.Machineroom" >
-    <id column="mr_id" property="mrId" jdbcType="INTEGER" />
-    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <id column="mr_id" property="mrId" jdbcType="VARCHAR" />
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="mr_name" property="mrName" jdbcType="VARCHAR" />
     <result column="mr_length" property="mrLength" jdbcType="VARCHAR" />
     <result column="mr_width" property="mrWidth" jdbcType="VARCHAR" />
@@ -93,13 +93,13 @@
     select 
     <include refid="Base_Column_List" />
     from machineroom
-    where mr_id = #{mrId,jdbcType=INTEGER}
-      and user_id = #{userId,jdbcType=INTEGER}
+    where mr_id = #{mrId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.MachineroomKey" >
     delete from machineroom
-    where mr_id = #{mrId,jdbcType=INTEGER}
-      and user_id = #{userId,jdbcType=INTEGER}
+    where mr_id = #{mrId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.MachineroomExample" >
     delete from machineroom
@@ -112,7 +112,7 @@
       mr_length, mr_width, mr_height, 
       mr_picture, mr_model, mr_location, 
       mr_remark)
-    values (#{mrId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{mrName,jdbcType=VARCHAR}, 
+    values (#{mrId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{mrName,jdbcType=VARCHAR}, 
       #{mrLength,jdbcType=VARCHAR}, #{mrWidth,jdbcType=VARCHAR}, #{mrHeight,jdbcType=VARCHAR}, 
       #{mrPicture,jdbcType=VARCHAR}, #{mrModel,jdbcType=VARCHAR}, #{mrLocation,jdbcType=VARCHAR}, 
       #{mrRemark,jdbcType=VARCHAR})
@@ -153,10 +153,10 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="mrId != null" >
-        #{mrId,jdbcType=INTEGER},
+        #{mrId,jdbcType=VARCHAR},
       </if>
       <if test="userId != null" >
-        #{userId,jdbcType=INTEGER},
+        #{userId,jdbcType=VARCHAR},
       </if>
       <if test="mrName != null" >
         #{mrName,jdbcType=VARCHAR},
@@ -194,10 +194,10 @@
     update machineroom
     <set >
       <if test="record.mrId != null" >
-        mr_id = #{record.mrId,jdbcType=INTEGER},
+        mr_id = #{record.mrId,jdbcType=VARCHAR},
       </if>
       <if test="record.userId != null" >
-        user_id = #{record.userId,jdbcType=INTEGER},
+        user_id = #{record.userId,jdbcType=VARCHAR},
       </if>
       <if test="record.mrName != null" >
         mr_name = #{record.mrName,jdbcType=VARCHAR},
@@ -230,8 +230,8 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update machineroom
-    set mr_id = #{record.mrId,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
+    set mr_id = #{record.mrId,jdbcType=VARCHAR},
+      user_id = #{record.userId,jdbcType=VARCHAR},
       mr_name = #{record.mrName,jdbcType=VARCHAR},
       mr_length = #{record.mrLength,jdbcType=VARCHAR},
       mr_width = #{record.mrWidth,jdbcType=VARCHAR},
@@ -272,8 +272,8 @@
         mr_remark = #{mrRemark,jdbcType=VARCHAR},
       </if>
     </set>
-    where mr_id = #{mrId,jdbcType=INTEGER}
-      and user_id = #{userId,jdbcType=INTEGER}
+    where mr_id = #{mrId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.Machineroom" >
     update machineroom
@@ -285,7 +285,7 @@
       mr_model = #{mrModel,jdbcType=VARCHAR},
       mr_location = #{mrLocation,jdbcType=VARCHAR},
       mr_remark = #{mrRemark,jdbcType=VARCHAR}
-    where mr_id = #{mrId,jdbcType=INTEGER}
-      and user_id = #{userId,jdbcType=INTEGER}
+    where mr_id = #{mrId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
   </update>
 </mapper>

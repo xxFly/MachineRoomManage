@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import java.io.IOException;
 
 //public class MqTestImpl{
-@Service("MqTestImpl")
+@Service
 public class MqTestImpl implements MqTest {
 
     @Resource(name = "amqpTemplate")
@@ -16,6 +16,9 @@ public class MqTestImpl implements MqTest {
 
     @Override
     public void sendMessage(Object message) {
+        System.out.println("---------------------send message:"+ message);
+        System.out.println("---------------------send message:"+ message.getClass());
+        System.out.println("---------------------send message:"+ message.toString());
         amqpTemplate.convertAndSend("queue_1_key",message);
     }
 }

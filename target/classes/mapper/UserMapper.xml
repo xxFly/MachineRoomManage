@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.edu.bupt.bnrc.dao.UserMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.User" >
-    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
     <result column="user_email" property="userEmail" jdbcType="VARCHAR" />
@@ -75,14 +75,6 @@
     user_id, user_name, user_password, user_email, user_phone, user_headImage, user_signature, 
     user_authority, user_lastLogin, user_remark
   </sql>
-
-  <select id="selectByUser" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.User" >
-    select
-    *
-    from user
-    where user_id = #{userId,jdbcType=INTEGER} and user_password = #{userPassword,jdbcType=VARCHAR}
-  </select>
-
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.UserExample" >
     select
     <if test="distinct" >
@@ -97,15 +89,23 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from user
-    where user_id = #{userId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+
+  <select id="selectByUser" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.User" >
+    select
+    *
+    from user
+    where user_id = #{userId,jdbcType=VARCHAR} and user_password = #{userPassword,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from user
-    where user_id = #{userId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.UserExample" >
     delete from user
@@ -118,7 +118,7 @@
       user_email, user_phone, user_headImage, 
       user_signature, user_authority, user_lastLogin, 
       user_remark)
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
+    values (#{userId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
       #{userEmail,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userHeadimage,jdbcType=VARCHAR}, 
       #{userSignature,jdbcType=VARCHAR}, #{userAuthority,jdbcType=VARCHAR}, #{userLastlogin,jdbcType=VARCHAR}, 
       #{userRemark,jdbcType=VARCHAR})
@@ -159,7 +159,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
-        #{userId,jdbcType=INTEGER},
+        #{userId,jdbcType=VARCHAR},
       </if>
       <if test="userName != null" >
         #{userName,jdbcType=VARCHAR},
@@ -200,7 +200,7 @@
     update user
     <set >
       <if test="record.userId != null" >
-        user_id = #{record.userId,jdbcType=INTEGER},
+        user_id = #{record.userId,jdbcType=VARCHAR},
       </if>
       <if test="record.userName != null" >
         user_name = #{record.userName,jdbcType=VARCHAR},
@@ -236,7 +236,7 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update user
-    set user_id = #{record.userId,jdbcType=INTEGER},
+    set user_id = #{record.userId,jdbcType=VARCHAR},
       user_name = #{record.userName,jdbcType=VARCHAR},
       user_password = #{record.userPassword,jdbcType=VARCHAR},
       user_email = #{record.userEmail,jdbcType=VARCHAR},
@@ -281,7 +281,7 @@
         user_remark = #{userRemark,jdbcType=VARCHAR},
       </if>
     </set>
-    where user_id = #{userId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.User" >
     update user
@@ -294,6 +294,6 @@
       user_authority = #{userAuthority,jdbcType=VARCHAR},
       user_lastLogin = #{userLastlogin,jdbcType=VARCHAR},
       user_remark = #{userRemark,jdbcType=VARCHAR}
-    where user_id = #{userId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=VARCHAR}
   </update>
 </mapper>
