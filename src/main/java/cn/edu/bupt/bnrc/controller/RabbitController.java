@@ -21,7 +21,12 @@ public class RabbitController {
     @RequestMapping(value = "/main")
     @ResponseBody
     public String main() {
-        mqTest.sendMessage("main");
+        System.out.println("==============已发送main消息");
+        for(int i = 0; i < 5; i++){
+            String str = Integer.toString(i);
+            mqTest.sendMessage("main"+str);
+
+        }
         return "main";
     }
 

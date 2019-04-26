@@ -16,6 +16,6 @@ public class MqTestImpl implements MqTest {
 
     @Override
     public void sendMessage(Object message) {
-        amqpTemplate.convertAndSend("queueTestKey",message);
+        amqpTemplate.convertAndSend("queue_1_key",message);
     }
 }
