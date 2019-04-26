@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
 
-    int addUser(User user);
+    int insertUser(User user);
 
     int deleteUserById(Integer id);
 
@@ -17,5 +17,5 @@ public interface UserService {
 
     List<User> queryAllUser();
 
-    void mqTest(Message message);
+
 }

@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-public class MessageConsumer implements MessageListener, UserService {
+public class MessageConsumer implements MessageListener {
 
     private Logger logger = LoggerFactory.getLogger(MessageConsumer.class);
 
@@ -34,33 +34,4 @@ public class MessageConsumer implements MessageListener, UserService {
         }
     }
 
-    @Override
-    public int addUser(User user) {
-        return 0;
-    }
-
-    @Override
-    public int deleteUserById(Integer id) {
-        return 0;
-    }
-
-    @Override
-    public int updateUser(User user) {
-        return 0;
-    }
-
-    @Override
-    public User selectByUser(User user) {
-        return null;
-    }
-
-    @Override
-    public List<User> queryAllUser() {
-        return null;
-    }
-
-    @Override
-    public void mqTest(Message message) {
-        logger.info("--------------------------message:",message);
-    }
 }

@@ -21,6 +21,22 @@ public class User {
 
     private String userRemark;
 
+    public User() {
+    }
+
+    public User(Integer userId, String userName, String userPassword, String userEmail, String userPhone, String userHeadimage, String userSignature, String userAuthority, String userLastlogin, String userRemark) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userPhone = userPhone;
+        this.userHeadimage = userHeadimage;
+        this.userSignature = userSignature;
+        this.userAuthority = userAuthority;
+        this.userLastlogin = userLastlogin;
+        this.userRemark = userRemark;
+    }
+
     public Integer getUserId() {
         return userId;
     }

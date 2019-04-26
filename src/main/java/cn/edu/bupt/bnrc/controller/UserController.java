@@ -28,8 +28,8 @@ public class UserController {
 
 //        String s = "SSM vue前后端框架搭建成功";
 //        return s;
-        String userID = request.getParameter("userID");
-        String userPassword = request.getParameter("userPassword");
+        String userID = request.getParameter("user_id");
+        String userPassword = request.getParameter("user_password");
         User user = new User();
         user.setUserId(Integer.parseInt(userID));
         user.setUserPassword(userPassword);
@@ -62,6 +62,18 @@ public class UserController {
 
     @RequestMapping("/doRegister")
     public String register(HttpServletRequest request){
+        String userID = request.getParameter("user_id");
+        String userName = request.getParameter("user_name");
+        String userPassword = request.getParameter("user_password");
+        String userEmail = request.getParameter("user_email");
+        String userPhone = request.getParameter("user_phone");
+        String userHeadImage = "";
+        String userSignature = request.getParameter("user_signature");
+        String userAuthority = "";
+        String userLastLogin = "";
+        String userRemark = request.getParameter("user_remark");
+        User user = new User(Integer.parseInt(userID), userName, userPassword, userEmail, userPhone, userHeadImage, userSignature, userAuthority, userLastLogin, userRemark);
+        userService.insertUser(user);
         return "redirect:/user/registerSuccess";
     }
 

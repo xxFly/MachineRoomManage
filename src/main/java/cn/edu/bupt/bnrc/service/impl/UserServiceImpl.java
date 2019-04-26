@@ -9,39 +9,32 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserServiceImpl{
-//public class UserServiceImpl implements UserService {
-//    @Autowired
-//    private UserMapper userMapper;
-//
-//    @Override
-//    public int addUser(User user) {
-//        return userMapper.insert(user);
-//    }
-//
-//    @Override
-//    public int deleteUserById(Integer id) {
-//        return userMapper.deleteByPrimaryKey(id);
-//    }
-//
-//    @Override
-//    public int updateUser(User user) {
-//        return userMapper.updateByPrimaryKey(user);
-//    }
-//
-//    @Override
-//    public User selectByUser(User user) {
-//        return userMapper.selectByUser(user);
-//    }
-//
-//    @Override
-//    public List<User> queryAllUser() {
-//        return null;
-//    }
-//
-//    @Override
-//    public void mqTest() {
-//        System.out.println("--------------------------");
-//        System.out.println("进入消息队列测试");
-//    }
+public class UserServiceImpl implements UserService {
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public int insertUser(User user) {
+        return userMapper.insert(user);
+    }
+
+    @Override
+    public int deleteUserById(Integer id) {
+        return userMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateUser(User user) {
+        return userMapper.updateByPrimaryKey(user);
+    }
+
+    @Override
+    public User selectByUser(User user) {
+        return userMapper.selectByUser(user);
+    }
+
+    @Override
+    public List<User> queryAllUser() {
+        return null;
+    }
 }

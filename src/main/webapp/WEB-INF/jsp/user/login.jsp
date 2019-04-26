@@ -15,8 +15,8 @@
 </head>
 <body>
 <form action="${path}/user/doLogin" method="post">
-    <div>账号：<input type="text" name="userID" placeholder="账号"></div>
-    <div>密码：<input type="text" name="userPassword" placeholder="密码"></div>
+    <div>账号：<input type="text" name="user_id" placeholder="账号"></div>
+    <div>密码：<input type="text" name="user_password" placeholder="密码"></div>
     <div><button type="submit" id="login">登录</button></div>
 </form>
 </body>
