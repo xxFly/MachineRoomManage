@@ -28,4 +28,8 @@ public interface MachineroomMapper {
     int updateByPrimaryKeySelective(Machineroom record);
 
     int updateByPrimaryKey(Machineroom record);
+
+    List<Machineroom> queryAllRooms(String userId);
+
+    List<String> queryAllRoomIds(String user_id);
 }

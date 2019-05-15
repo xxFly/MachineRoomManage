@@ -39,12 +39,20 @@
 </div>
 <br><br>
 <div>
+    <form action="${path}/user/doLogin" method="post">
+        <div>账号：<input type="text" name="user_id" placeholder="账号"></div>
+        <div>密码：<input type="password" name="user_password" placeholder="密码"></div>
+        <div><button type="submit" id="login">登录</button></div>
+    </form>
 <%--    <a href="${path }/paper/allPaper">点击进入管理页面</a>--%>
 <%--    <a href="${path}/user/login">去登陆</a>--%>
-    <div><a href="${path }/user/login"><h3>登录</h3></a></div>
-    <div><a href="${path }/user/register"><h3>注册</h3></a></div>
-    <div><a href="${path }/rabbit/main"><h3>rabbitMain</h3></a></div>
-    <div><a href="${path }/rabbit/doValid"><h3>rabbitDo</h3></a></div>
+<%--    <div><a href="${path }/easyuiJSP/main.jsp"><h3>main</h3></a></div>--%>
+<%--    <a href="${path }/machineRoom/queryAllRoomsAndCabinet?user_id=001"><h3>getRooms</h3></a>--%>
+<%--    <a href="${path }/user/login"><h3>login</h3></a>--%>
+<%--    <a href="${path }/user/register"><h3>register</h3></a>--%>
+<%--    <a href="${path }/rabbit/main"><h3>rabbitMain</h3></a>--%>
+<%--    <a href="${path }/rabbit/doValid"><h3>rabbitDo</h3></a>--%>
+
 </div>
 </body>
 </html>

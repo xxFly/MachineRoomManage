@@ -4,6 +4,8 @@ import cn.edu.bupt.bnrc.pojo.Equipment;
 import cn.edu.bupt.bnrc.pojo.EquipmentExample;
 import cn.edu.bupt.bnrc.pojo.EquipmentKey;
 import java.util.List;
+
+import cn.edu.bupt.bnrc.pojo.Machineroom;
 import org.apache.ibatis.annotations.Param;
 
 public interface EquipmentMapper {
@@ -28,4 +30,6 @@ public interface EquipmentMapper {
     int updateByPrimaryKeySelective(Equipment record);
 
     int updateByPrimaryKey(Equipment record);
+
+    List<Equipment> queryByRoomIds(List machineRoomIdList) ;
 }

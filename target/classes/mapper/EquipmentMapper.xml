@@ -78,6 +78,17 @@
     equip_id, equip_cab_id, mr_id, equip_name, equip_length, equip_width, equip_height, 
     equip_brand, equip_version, equip_location, equip_picture, equip_type, equip_remark
   </sql>
+
+  <select id="queryByRoomIds" resultMap="BaseResultMap" >
+    select
+    *
+    from equipment
+    where mr_id in
+    <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+      #{id}
+    </foreach>
+  </select>
+
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentExample" >
     select
     <if test="distinct" >

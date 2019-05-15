@@ -75,6 +75,22 @@
     mr_id, user_id, mr_name, mr_length, mr_width, mr_height, mr_picture, mr_model, mr_location, 
     mr_remark
   </sql>
+
+
+  <select id="queryAllRooms" resultMap="BaseResultMap" parameterType="java.lang.String"  >
+    select
+    *
+    from machineroom
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+
+  <select id="queryAllRoomIds" resultType="java.lang.String" parameterType="java.lang.String">
+    select
+    mr_id
+    from machineroom
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.MachineroomExample" >
     select
     <if test="distinct" >

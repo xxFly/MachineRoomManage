@@ -23,6 +23,16 @@
      -->
     <mvc:default-servlet-handler/>
 
+    <!-- 接口跨域配置 -->
+    <mvc:cors>
+        <mvc:mapping path="/**"
+                     allowed-origins="*"
+                     allowed-methods="POST, GET, OPTIONS, DELETE, PUT"
+                     allowed-headers="Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+                     allow-credentials="true" />
+    </mvc:cors>
+
+
     <!-- 3.配置jsp 显示ViewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -32,4 +42,92 @@
 
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="cn.edu.bupt.bnrc.controller" />
+
+<!--    json相关-->
+
+<!--    <bean-->
+<!--            class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+<!--        <property name="messageConverters">-->
+<!--            <list>-->
+<!--                <ref bean="mappingJackson2HttpMessageConverter" />-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; 自动解析action返回值 解析成json格式 &ndash;&gt;-->
+<!--    <bean id="mappingJackson2HttpMessageConverter"-->
+<!--          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+<!--        <property name="supportedMediaTypes">-->
+<!--            <list>-->
+<!--                <value>text/html;charset=utf-8</value>-->
+<!--                <value>text/plain;charset=utf-8</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <mvc:annotation-driven>-->
+<!--        <mvc:message-converters>-->
+<!--            <bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+<!--                <property name="supportedMediaTypes">-->
+<!--                    <list>-->
+<!--                        <value>text/plain;charset=UTF-8</value>-->
+<!--                        <value>text/html;charset=UTF-8</value>-->
+<!--                    </list>-->
+<!--                </property>-->
+<!--            </bean>-->
+<!--&lt;!&ndash;            MappingJacksonHttpMessageConverter 加了个2&ndash;&gt;-->
+<!--            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+<!--                <property name="supportedMediaTypes">-->
+<!--                    <list>-->
+<!--                        <value>application/json;charset=UTF-8</value>-->
+<!--                    </list>-->
+<!--                </property>-->
+<!--            </bean>-->
+<!--        </mvc:message-converters>-->
+<!--    </mvc:annotation-driven>-->
+    <!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
+    <!-- 支持JSON数据格式 -->
+<!--    <bean-->
+<!--            class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+<!--        <property name="messageConverters">-->
+<!--            <list>-->
+<!--                <bean-->
+<!--                        class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />&lt;!&ndash; 解析导出文件byte流 &ndash;&gt;-->
+<!--                <ref bean="fastJsonHttpMessageConverter" />-->
+<!--                <ref bean="mappingJacksonHttpMessageConverter" />-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="mappingJacksonHttpMessageConverter"-->
+<!--          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; 使用fastJson来支持JSON数据格式 &ndash;&gt;-->
+<!--    <bean id="fastJsonHttpMessageConverter"-->
+<!--          class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">-->
+<!--        <property name="supportedMediaTypes">-->
+<!--            <list>-->
+<!--                <value>text/html;charset=UTF-8</value>-->
+<!--                <value>application/json</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="features">-->
+<!--            <list>-->
+<!--                <value>WriteMapNullValue</value>-->
+<!--                <value>QuoteFieldNames</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <!--支持Json的Bean,配置ViewResolver。 可以用多个ViewResolver。 使用order属性排序。 InternalResourceViewResolver放在最后。 -->
+    <bean
+            class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1" />
+
+        <property name="defaultViews">
+            <list>
+                <!-- JSON View -->
+                <bean
+                        class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+                </bean>
+            </list>
+        </property>
+    </bean>
 </beans>

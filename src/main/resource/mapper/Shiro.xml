@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.bupt.bnrc.dao.ShiroDao">
+    <select id="getUserByUserName" resultType="cn.edu.bupt.bnrc.pojo.User">
+        select * FROM user
+        WHERE user_id= #{0}
+    </select>
+
+    <select id="getUserRoleByUserId" resultType="java.lang.String">
+        SELECT user_authority FROM user
+        where user_id = #{_parameter}
+    </select>
+
+    <select id="getPermissionsByRoleId" resultType="cn.edu.bupt.bnrc.pojo.Permission">
+        SELECT per_id,role_id,per_url,per_remark FROM permission a
+        WHERE role_id = #{_parameter}
+    </select>
+
+</mapper>

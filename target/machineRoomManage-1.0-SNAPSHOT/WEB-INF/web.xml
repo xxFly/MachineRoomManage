@@ -7,23 +7,29 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1" metadata-complete="true">
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-    <servlet-name>dispatcher</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <!-- 配置springMVC需要加载的配置文件
-        spring-dao.xml,spring-service.xml,spring-mvc.xml
-        Mybatis - > spring -> springmvc
-     -->
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:spring/spring-*.xml</param-value>
-    </init-param>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>dispatcher</servlet-name>
-    <!-- 默认匹配所有的请求 -->
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>
+<!--  <servlet>-->
+<!--    <servlet-name>dispatcher</servlet-name>-->
+<!--    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
+<!--    &lt;!&ndash; 配置springMVC需要加载的配置文件-->
+<!--        spring-dao.xml,spring-service.xml,spring-mvc.xml-->
+<!--        Mybatis - > spring -> springmvc-->
+<!--     &ndash;&gt;-->
+<!--    <init-param>-->
+<!--      <param-name>contextConfigLocation</param-name>-->
+<!--      <param-value>classpath:spring/spring-*.xml</param-value>-->
+<!--    </init-param>-->
+<!--  </servlet>-->
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>dispatcher</servlet-name>-->
+<!--    &lt;!&ndash; 默认匹配所有的请求 &ndash;&gt;-->
+<!--    <url-pattern>/</url-pattern>-->
+<!--  </servlet-mapping>-->
+  <!-- Spring和mybatis的配置文件 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/spring-*.xml</param-value>
+  </context-param>
+  <!-- 编码过滤器 -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>
@@ -34,9 +40,87 @@
       <param-value>utf-8</param-value>
     </init-param>
   </filter>
-
   <filter-mapping>
     <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+
+
+  <!-- Spring监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- 防止Spring内存溢出监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+
+  <!-- Spring MVC servlet -->
+  <servlet>
+    <servlet-name>SpringMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/spring-mvc.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+    <async-supported>true</async-supported>
+  </servlet>
+
+  <!-- 配置由Spring提供的过滤器，用于整合shiro框架 -->
+  <!-- 在项目启动的过程中，当前过滤器会从Spring工厂中提取同名对象 -->
+  <filter>
+    <filter-name>shiroFilter</filter-name>
+    <filter-class>
+      org.springframework.web.filter.DelegatingFilterProxy
+    </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>shiroFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <description>跨域过滤器</description>
+    <filter-name>CORS</filter-name>
+    <filter-class>cn.edu.bupt.bnrc.filter.CORSFilter</filter-class>
+    <init-param>
+      <param-name>cors.allowOrigin</param-name>
+      <param-value>*</param-value>
+    </init-param>
+    <init-param>
+      <param-name>cors.supportedMethods</param-name>
+      <param-value>GET, POST, HEAD, PUT, DELETE</param-value>
+    </init-param>
+    <init-param>
+      <param-name>cors.supportedHeaders</param-name>
+      <param-value>Accept, Origin, X-Requested-With, Content-Type, Last-Modified</param-value>
+    </init-param>
+    <init-param>
+      <param-name>cors.exposedHeaders</param-name>
+      <param-value>Set-Cookie</param-value>
+    </init-param>
+    <init-param>
+      <param-name>cors.supportsCredentials</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>CORS</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+  <!-- Spring MVC 普通页面拦截 -->
+  <servlet-mapping>
+    <servlet-name>SpringMVC</servlet-name>
+    <!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
