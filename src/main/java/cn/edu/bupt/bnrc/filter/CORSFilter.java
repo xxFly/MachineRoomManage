@@ -15,10 +15,12 @@ public class CORSFilter implements Filter {
         HttpServletRequest request=(HttpServletRequest)req;
         // 处理简单请求
         // 跨域请求默认不携带cookie,如果要携带cookie，需要设置下边2个响应头
-        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));// 必选，所有有效的跨域响应都必须包含这个请求头, 没有的话会导致跨域请求失败
+        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));// 必选，所有有效的跨域响应都必须包含这个请求头
+        // , 没有的话会导致跨域请求失败
         response.setHeader("Access-Control-Allow-Credentials", "true");//可选，此处设置为true,对应前端 xhr.withCredentials = true;
         //处理非简单请求
-        //  非简单请求：浏览器会发送两个请求, 第一个请求(成为预检请求)会像服务器确定是否接受这个跨域请求, 第二个才是真正的发出请求. 浏览器自动的处理这两个请求, 同时预检请求也是可以被缓存的, 而不用每次请求都需要发送预检请求.
+        //  非简单请求：浏览器会发送两个请求, 第一个请求(成为预检请求)会像服务器确定是否接受这个跨域请求, 第二个才是真正的发出请求.
+        //  浏览器自动的处理这两个请求, 同时预检请求也是可以被缓存的, 而不用每次请求都需要发送预检请求.
         //  预检请求是在实际的请求发出前先向服务器确认是否能够处理这个请求. 服务器应该检查上边两个请求头的值, 来判断这个请求是否有效.
         response.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");// 必选
         response.setHeader("Access-Control-Allow-Headers",

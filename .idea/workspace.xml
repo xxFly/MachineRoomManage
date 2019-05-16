@@ -8,38 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="90a1fee7-36ec-482e-bcfb-98e454af372e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/EquipmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/EquipmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/MachineroomMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/dao/MachineroomMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/EquipmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/EquipmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/MachineroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/MachineroomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/dao/EquipmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/dao/EquipmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/dao/MachineroomMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/dao/MachineroomMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EquipmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EquipmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MachineroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/MachineroomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/dao/EquipmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/dao/EquipmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/dao/MachineroomMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/dao/MachineroomMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/EquipmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/EquipmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/MachineroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/mapper/MachineroomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/jsp/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/jsp/user/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/filter/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/filter/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/filter/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/bupt/bnrc/filter/CORSFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/filter/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/machineRoomManage-1.0-SNAPSHOT/WEB-INF/classes/cn/edu/bupt/bnrc/filter/CORSFilter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,22 +42,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4725">
-              <caret line="210" column="22" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="22" />
+            <state relative-caret-position="-866">
+              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
               <folding>
                 <element signature="e#1422#1423#0" expanded="true" />
                 <element signature="e#1457#1458#0" expanded="true" />
                 <element signature="n#!!block;n#loginSuccess#0;n#UserController#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/shiro-context.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -112,10 +74,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/filter/CORSFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="648">
+              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/DeviceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1091#1107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -231,8 +206,9 @@
         <option value="$PROJECT_DIR$/src/main/resource/shiro-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/spring/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/filter/CORSFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/filter/CORSFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/DeviceController.java" />
       </list>
     </option>
   </component>
@@ -273,10 +249,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="273" />
-    <option name="y" value="44" />
-    <option name="width" value="1393" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="279" />
+    <option name="y" value="11" />
+    <option name="width" value="1409" />
     <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -287,7 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,6 +295,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bnrc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="machineRoomManage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="machineRoomManage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bnrc" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="machineRoomManage" type="b2602c69:ProjectViewProjectNode" />
@@ -396,6 +380,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -776,12 +761,13 @@
       <workItem from="1556935969918" duration="23804000" />
       <workItem from="1557301588362" duration="10089000" />
       <workItem from="1557713223991" duration="29681000" />
-      <workItem from="1557899511597" duration="401000" />
+      <workItem from="1557899511597" duration="10623000" />
+      <workItem from="1557968675378" duration="4119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129611000" />
+    <option name="totallyTimeSpent" value="144039000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -793,9 +779,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="279" y="11" width="1409" height="1017" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21577017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08228317" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -805,7 +791,42 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46973094" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5084938" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.13789238" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.53699553" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3295964" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3105381" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3171008" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.12713936" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3292789" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.094743274" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25672644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.13789238" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -828,19 +849,12 @@
       <window_info anchor="right" id="Database" order="6" weight="0.3292789" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/Machineroom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/pojo/UserExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8073">
@@ -1167,18 +1181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4725">
-          <caret line="210" column="22" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="22" />
-          <folding>
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="n#!!block;n#loginSuccess#0;n#UserController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6318">
@@ -1195,8 +1197,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/filter/CORSFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state relative-caret-position="648">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1219,8 +1221,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/shiro-context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+        <state relative-caret-position="268">
+          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-866">
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding>
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="n#!!block;n#loginSuccess#0;n#UserController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/bupt/bnrc/controller/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1091#1107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
