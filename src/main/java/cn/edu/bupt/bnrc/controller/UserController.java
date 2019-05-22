@@ -166,7 +166,7 @@ public class UserController {
 //        System.out.println("----------controller send :"+bytes);
 //        amqpTemplate.convertAndSend("exchange","topic.messages",bytes);
         byte[] bytes=getBytesFromObject(user);
-        mqTest.sendMessage(bytes);
+//        mqTest.sendMessage(bytes);
         return result;
     }
 
@@ -187,13 +187,20 @@ public class UserController {
     }
 
     @RequestMapping("/admin")
-    @ResponseBody
     @CrossOrigin
-    public Map<String,String> admin(String user_id, String user_name){
-        System.out.println("---------------admin进来了");
+    @ResponseBody
+    public Map<String,String> admin(String user_id, HttpSession session, Model model){
+        System.out.println("---------------admin进来了"+user_id);
         Map<String,String> result = new HashMap<String,String>();
         String key = "key";
-        String value = "value";
+        String value ;
+        User user = userService.selectByPrimaryKey(user_id);
+        if(user == null){
+            value = "false";
+        }else{
+            value = "true";
+        }
+
         result.put(key,value);
         return result;
 //        return "/user/admin";

@@ -3,7 +3,7 @@
 <mapper namespace="cn.edu.bupt.bnrc.dao.MachineroomMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.Machineroom" >
     <id column="mr_id" property="mrId" jdbcType="VARCHAR" />
-    <id column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="mr_name" property="mrName" jdbcType="VARCHAR" />
     <result column="mr_length" property="mrLength" jdbcType="VARCHAR" />
     <result column="mr_width" property="mrWidth" jdbcType="VARCHAR" />
@@ -76,7 +76,6 @@
     mr_remark
   </sql>
 
-
   <select id="queryAllRooms" resultMap="BaseResultMap" parameterType="java.lang.String"  >
     select
     *
@@ -105,17 +104,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.MachineroomKey" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from machineroom
     where mr_id = #{mrId,jdbcType=VARCHAR}
-      and user_id = #{userId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.MachineroomKey" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from machineroom
     where mr_id = #{mrId,jdbcType=VARCHAR}
-      and user_id = #{userId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.MachineroomExample" >
     delete from machineroom
@@ -263,6 +260,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="cn.edu.bupt.bnrc.pojo.Machineroom" >
     update machineroom
     <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
       <if test="mrName != null" >
         mr_name = #{mrName,jdbcType=VARCHAR},
       </if>
@@ -289,11 +289,11 @@
       </if>
     </set>
     where mr_id = #{mrId,jdbcType=VARCHAR}
-      and user_id = #{userId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.Machineroom" >
     update machineroom
-    set mr_name = #{mrName,jdbcType=VARCHAR},
+    set user_id = #{userId,jdbcType=VARCHAR},
+      mr_name = #{mrName,jdbcType=VARCHAR},
       mr_length = #{mrLength,jdbcType=VARCHAR},
       mr_width = #{mrWidth,jdbcType=VARCHAR},
       mr_height = #{mrHeight,jdbcType=VARCHAR},
@@ -302,6 +302,5 @@
       mr_location = #{mrLocation,jdbcType=VARCHAR},
       mr_remark = #{mrRemark,jdbcType=VARCHAR}
     where mr_id = #{mrId,jdbcType=VARCHAR}
-      and user_id = #{userId,jdbcType=VARCHAR}
   </update>
 </mapper>

@@ -2,7 +2,6 @@ package cn.edu.bupt.bnrc.service.impl;
 
 import cn.edu.bupt.bnrc.dao.EquipmentMapper;
 import cn.edu.bupt.bnrc.pojo.Equipment;
-import cn.edu.bupt.bnrc.pojo.EquipmentKey;
 import cn.edu.bupt.bnrc.pojo.Machineroom;
 import cn.edu.bupt.bnrc.service.interfaces.EquipmentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +15,22 @@ public class EquipmentServiceImpl implements EquipmentService {
     private EquipmentMapper equipmentMapper;
     @Override
     public int insertEquipment(Equipment equipment) {
-        return 0;
+        return equipmentMapper.insert(equipment);
     }
 
     @Override
-    public int deleteEquipmentById(EquipmentKey key) {
-        return 0;
+    public int deleteEquipmentById(String equipId) {
+        return equipmentMapper.deleteByPrimaryKey(equipId);
     }
 
     @Override
     public int updateEquipment(Equipment equipment) {
-        return 0;
+        return equipmentMapper.updateByPrimaryKey(equipment);
     }
 
     @Override
-    public Machineroom selectByEquipment(Equipment equipment) {
-        return null;
+    public Equipment selectByEquipmentId(String equipmentId) {
+        return equipmentMapper.selectByPrimaryKey(equipmentId);
     }
 
     //查找某些机房内的设备

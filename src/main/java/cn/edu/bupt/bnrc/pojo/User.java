@@ -23,9 +23,6 @@ public class User implements Serializable {
 
     private String userRemark;
 
-    public User() {
-    }
-
     public User(String userId, String userName, String userPassword, String userEmail, String userPhone, String userHeadimage, String userSignature, String userAuthority, String userLastlogin, String userRemark) {
         this.userId = userId;
         this.userName = userName;
@@ -37,22 +34,6 @@ public class User implements Serializable {
         this.userAuthority = userAuthority;
         this.userLastlogin = userLastlogin;
         this.userRemark = userRemark;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId='" + userId + '\'' +
-                ", userName='" + userName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                ", userPhone='" + userPhone + '\'' +
-                ", userHeadimage='" + userHeadimage + '\'' +
-                ", userSignature='" + userSignature + '\'' +
-                ", userAuthority='" + userAuthority + '\'' +
-                ", userLastlogin='" + userLastlogin + '\'' +
-                ", userRemark='" + userRemark + '\'' +
-                '}';
     }
 
     public String getUserId() {

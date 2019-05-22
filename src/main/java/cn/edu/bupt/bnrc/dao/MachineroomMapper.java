@@ -2,7 +2,6 @@ package cn.edu.bupt.bnrc.dao;
 
 import cn.edu.bupt.bnrc.pojo.Machineroom;
 import cn.edu.bupt.bnrc.pojo.MachineroomExample;
-import cn.edu.bupt.bnrc.pojo.MachineroomKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -11,7 +10,7 @@ public interface MachineroomMapper {
 
     int deleteByExample(MachineroomExample example);
 
-    int deleteByPrimaryKey(MachineroomKey key);
+    int deleteByPrimaryKey(String mrId);
 
     int insert(Machineroom record);
 
@@ -19,7 +18,7 @@ public interface MachineroomMapper {
 
     List<Machineroom> selectByExample(MachineroomExample example);
 
-    Machineroom selectByPrimaryKey(MachineroomKey key);
+    Machineroom selectByPrimaryKey(String mrId);
 
     int updateByExampleSelective(@Param("record") Machineroom record, @Param("example") MachineroomExample example);
 
@@ -31,5 +30,5 @@ public interface MachineroomMapper {
 
     List<Machineroom> queryAllRooms(String userId);
 
-    List<String> queryAllRoomIds(String user_id);
+    List<String> queryAllRoomIds(String userId);
 }

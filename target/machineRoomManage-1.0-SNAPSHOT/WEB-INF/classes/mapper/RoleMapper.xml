@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.edu.bupt.bnrc.dao.RoleMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.Role" >
-    <id column="role_id" property="roleId" jdbcType="INTEGER" />
+    <id column="role_id" property="roleId" jdbcType="VARCHAR" />
     <result column="role_name" property="roleName" jdbcType="VARCHAR" />
     <result column="role_remark" property="roleRemark" jdbcType="VARCHAR" />
   </resultMap>
@@ -81,15 +81,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from role
-    where role_id = #{roleId,jdbcType=INTEGER}
+    where role_id = #{roleId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from role
-    where role_id = #{roleId,jdbcType=INTEGER}
+    where role_id = #{roleId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.RoleExample" >
     delete from role
@@ -100,7 +100,7 @@
   <insert id="insert" parameterType="cn.edu.bupt.bnrc.pojo.Role" >
     insert into role (role_id, role_name, role_remark
       )
-    values (#{roleId,jdbcType=INTEGER}, #{roleName,jdbcType=VARCHAR}, #{roleRemark,jdbcType=VARCHAR}
+    values (#{roleId,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR}, #{roleRemark,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.edu.bupt.bnrc.pojo.Role" >
@@ -118,7 +118,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="roleId != null" >
-        #{roleId,jdbcType=INTEGER},
+        #{roleId,jdbcType=VARCHAR},
       </if>
       <if test="roleName != null" >
         #{roleName,jdbcType=VARCHAR},
@@ -138,7 +138,7 @@
     update role
     <set >
       <if test="record.roleId != null" >
-        role_id = #{record.roleId,jdbcType=INTEGER},
+        role_id = #{record.roleId,jdbcType=VARCHAR},
       </if>
       <if test="record.roleName != null" >
         role_name = #{record.roleName,jdbcType=VARCHAR},
@@ -153,7 +153,7 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update role
-    set role_id = #{record.roleId,jdbcType=INTEGER},
+    set role_id = #{record.roleId,jdbcType=VARCHAR},
       role_name = #{record.roleName,jdbcType=VARCHAR},
       role_remark = #{record.roleRemark,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -170,12 +170,12 @@
         role_remark = #{roleRemark,jdbcType=VARCHAR},
       </if>
     </set>
-    where role_id = #{roleId,jdbcType=INTEGER}
+    where role_id = #{roleId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.Role" >
     update role
     set role_name = #{roleName,jdbcType=VARCHAR},
       role_remark = #{roleRemark,jdbcType=VARCHAR}
-    where role_id = #{roleId,jdbcType=INTEGER}
+    where role_id = #{roleId,jdbcType=VARCHAR}
   </update>
 </mapper>

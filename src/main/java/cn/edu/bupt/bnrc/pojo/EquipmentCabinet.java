@@ -1,6 +1,10 @@
 package cn.edu.bupt.bnrc.pojo;
 
-public class EquipmentCabinet extends EquipmentCabinetKey {
+public class EquipmentCabinet {
+    private String equipCabId;
+
+    private String mrId;
+
     private String equipCabName;
 
     private String equipCabLength;
@@ -14,6 +18,22 @@ public class EquipmentCabinet extends EquipmentCabinetKey {
     private String equipCabLocation;
 
     private String equipCabRemark;
+
+    public String getEquipCabId() {
+        return equipCabId;
+    }
+
+    public void setEquipCabId(String equipCabId) {
+        this.equipCabId = equipCabId == null ? null : equipCabId.trim();
+    }
+
+    public String getMrId() {
+        return mrId;
+    }
+
+    public void setMrId(String mrId) {
+        this.mrId = mrId == null ? null : mrId.trim();
+    }
 
     public String getEquipCabName() {
         return equipCabName;

@@ -1,7 +1,6 @@
 package cn.edu.bupt.bnrc.service.interfaces;
 
 import cn.edu.bupt.bnrc.pojo.Machineroom;
-import cn.edu.bupt.bnrc.pojo.MachineroomKey;
 import cn.edu.bupt.bnrc.pojo.User;
 
 import java.util.List;
@@ -9,7 +8,6 @@ import java.util.List;
 public interface MachineRoomService {
     int insertRoom(Machineroom machineroom);
 
-    int deleteRoomById(MachineroomKey key);
 
     int updateRoom(Machineroom machineroom);
 

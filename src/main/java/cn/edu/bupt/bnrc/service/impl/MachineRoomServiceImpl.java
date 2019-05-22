@@ -2,7 +2,6 @@ package cn.edu.bupt.bnrc.service.impl;
 
 import cn.edu.bupt.bnrc.dao.MachineroomMapper;
 import cn.edu.bupt.bnrc.pojo.Machineroom;
-import cn.edu.bupt.bnrc.pojo.MachineroomKey;
 import cn.edu.bupt.bnrc.service.interfaces.MachineRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,10 +18,6 @@ public class MachineRoomServiceImpl implements MachineRoomService {
         return machineroomMapper.insert(machineroom);
     }
 
-    @Override
-    public int deleteRoomById(MachineroomKey key) {
-        return machineroomMapper.deleteByPrimaryKey(key);
-    }
 
     @Override
     public int updateRoom(Machineroom machineroom) {

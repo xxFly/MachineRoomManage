@@ -17,5 +17,7 @@ public interface UserService {
 
     List<User> queryAllUser();
 
+    User selectByPrimaryKey(String userId);
+
 
 }

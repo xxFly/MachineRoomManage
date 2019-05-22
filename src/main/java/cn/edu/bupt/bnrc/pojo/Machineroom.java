@@ -1,6 +1,10 @@
 package cn.edu.bupt.bnrc.pojo;
 
-public class Machineroom extends MachineroomKey {
+public class Machineroom {
+    private String mrId;
+
+    private String userId;
+
     private String mrName;
 
     private String mrLength;
@@ -16,6 +20,51 @@ public class Machineroom extends MachineroomKey {
     private String mrLocation;
 
     private String mrRemark;
+
+    public Machineroom(String mrId, String userId, String mrName, String mrLength, String mrWidth, String mrHeight, String mrPicture, String mrModel, String mrLocation, String mrRemark) {
+        this.mrId = mrId;
+        this.userId = userId;
+        this.mrName = mrName;
+        this.mrLength = mrLength;
+        this.mrWidth = mrWidth;
+        this.mrHeight = mrHeight;
+        this.mrPicture = mrPicture;
+        this.mrModel = mrModel;
+        this.mrLocation = mrLocation;
+        this.mrRemark = mrRemark;
+    }
+
+    @Override
+    public String toString() {
+        return "Machineroom{" +
+                "mrId='" + mrId + '\'' +
+                ", userId='" + userId + '\'' +
+                ", mrName='" + mrName + '\'' +
+                ", mrLength='" + mrLength + '\'' +
+                ", mrWidth='" + mrWidth + '\'' +
+                ", mrHeight='" + mrHeight + '\'' +
+                ", mrPicture='" + mrPicture + '\'' +
+                ", mrModel='" + mrModel + '\'' +
+                ", mrLocation='" + mrLocation + '\'' +
+                ", mrRemark='" + mrRemark + '\'' +
+                '}';
+    }
+
+    public String getMrId() {
+        return mrId;
+    }
+
+    public void setMrId(String mrId) {
+        this.mrId = mrId == null ? null : mrId.trim();
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
+    }
 
     public String getMrName() {
         return mrName;

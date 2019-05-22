@@ -3,8 +3,8 @@
 <mapper namespace="cn.edu.bupt.bnrc.dao.EquipmentMapper" >
   <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.Equipment" >
     <id column="equip_id" property="equipId" jdbcType="VARCHAR" />
-    <id column="equip_cab_id" property="equipCabId" jdbcType="VARCHAR" />
-    <id column="mr_id" property="mrId" jdbcType="VARCHAR" />
+    <result column="equip_cab_id" property="equipCabId" jdbcType="VARCHAR" />
+    <result column="mr_id" property="mrId" jdbcType="VARCHAR" />
     <result column="equip_name" property="equipName" jdbcType="VARCHAR" />
     <result column="equip_length" property="equipLength" jdbcType="VARCHAR" />
     <result column="equip_width" property="equipWidth" jdbcType="VARCHAR" />
@@ -103,19 +103,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentKey" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from equipment
     where equip_id = #{equipId,jdbcType=VARCHAR}
-      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
-      and mr_id = #{mrId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentKey" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from equipment
     where equip_id = #{equipId,jdbcType=VARCHAR}
-      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
-      and mr_id = #{mrId,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.EquipmentExample" >
     delete from equipment
@@ -295,6 +291,12 @@
   <update id="updateByPrimaryKeySelective" parameterType="cn.edu.bupt.bnrc.pojo.Equipment" >
     update equipment
     <set >
+      <if test="equipCabId != null" >
+        equip_cab_id = #{equipCabId,jdbcType=VARCHAR},
+      </if>
+      <if test="mrId != null" >
+        mr_id = #{mrId,jdbcType=VARCHAR},
+      </if>
       <if test="equipName != null" >
         equip_name = #{equipName,jdbcType=VARCHAR},
       </if>
@@ -327,12 +329,12 @@
       </if>
     </set>
     where equip_id = #{equipId,jdbcType=VARCHAR}
-      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
-      and mr_id = #{mrId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.Equipment" >
     update equipment
-    set equip_name = #{equipName,jdbcType=VARCHAR},
+    set equip_cab_id = #{equipCabId,jdbcType=VARCHAR},
+      mr_id = #{mrId,jdbcType=VARCHAR},
+      equip_name = #{equipName,jdbcType=VARCHAR},
       equip_length = #{equipLength,jdbcType=VARCHAR},
       equip_width = #{equipWidth,jdbcType=VARCHAR},
       equip_height = #{equipHeight,jdbcType=VARCHAR},
@@ -343,7 +345,5 @@
       equip_type = #{equipType,jdbcType=VARCHAR},
       equip_remark = #{equipRemark,jdbcType=VARCHAR}
     where equip_id = #{equipId,jdbcType=VARCHAR}
-      and equip_cab_id = #{equipCabId,jdbcType=VARCHAR}
-      and mr_id = #{mrId,jdbcType=VARCHAR}
   </update>
 </mapper>

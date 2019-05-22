@@ -2,10 +2,7 @@ package cn.edu.bupt.bnrc.dao;
 
 import cn.edu.bupt.bnrc.pojo.Equipment;
 import cn.edu.bupt.bnrc.pojo.EquipmentExample;
-import cn.edu.bupt.bnrc.pojo.EquipmentKey;
 import java.util.List;
-
-import cn.edu.bupt.bnrc.pojo.Machineroom;
 import org.apache.ibatis.annotations.Param;
 
 public interface EquipmentMapper {
@@ -13,7 +10,7 @@ public interface EquipmentMapper {
 
     int deleteByExample(EquipmentExample example);
 
-    int deleteByPrimaryKey(EquipmentKey key);
+    int deleteByPrimaryKey(String equipId);
 
     int insert(Equipment record);
 
@@ -21,7 +18,7 @@ public interface EquipmentMapper {
 
     List<Equipment> selectByExample(EquipmentExample example);
 
-    Equipment selectByPrimaryKey(EquipmentKey key);
+    Equipment selectByPrimaryKey(String equipId);
 
     int updateByExampleSelective(@Param("record") Equipment record, @Param("example") EquipmentExample example);
 
@@ -31,5 +28,5 @@ public interface EquipmentMapper {
 
     int updateByPrimaryKey(Equipment record);
 
-    List<Equipment> queryByRoomIds(List machineRoomIdList) ;
+    List<Equipment> queryByRoomIds(List machineRoomIdList);
 }

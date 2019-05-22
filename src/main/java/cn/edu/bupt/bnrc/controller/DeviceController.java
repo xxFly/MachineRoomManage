@@ -1,5 +1,10 @@
 package cn.edu.bupt.bnrc.controller;
 
+import cn.edu.bupt.bnrc.pojo.Equipment;
+import cn.edu.bupt.bnrc.pojo.EquipmentDetection;
+import cn.edu.bupt.bnrc.service.impl.MqTestImpl;
+import cn.edu.bupt.bnrc.service.interfaces.MqTest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,10 +22,13 @@ import java.util.Map;
 @Controller
 @RequestMapping("/device")
 public class DeviceController {
+    @Autowired
+    private MqTest mqTest = new MqTestImpl();
+
     @RequestMapping("/upload")
     @CrossOrigin
     @ResponseBody
-    public Map<String,String> upload(String fileBase64){
+    public Map<String,String> upload(String fileBase64, String user_id){
 //        Enumeration paramNames = request.getParameterNames();
 //        while(paramNames.hasMoreElements()) {
 //            String paramName = (String)paramNames.nextElement();
@@ -46,15 +54,15 @@ public class DeviceController {
                     b[i] += 256;
                 }
             }
-            value = String.valueOf(System.currentTimeMillis());
+            value = String.valueOf(System.currentTimeMillis()) + " " + user_id;
             resultMap.put(key,value);
             // 生成jpeg图片
-            String imgFilePath = "C:\\Users\\Fecinly\\Desktop\\"+value+".jpg";// 新生成的图片
+            String imgFilePath = "C:\\Users\\Fecinly\\Desktop\\machinePicture\\"+value+".jpg";// 新生成的图片
             OutputStream out = new FileOutputStream(imgFilePath);
             out.write(b);
             out.flush();
             out.close();
-
+            mqTest.sendMessage(value);
             return resultMap;
         } catch (Exception e) {
             resultMap.put(key,value);
@@ -62,4 +70,7 @@ public class DeviceController {
         }
 //        return "ok";
     }
+
+
+
 }

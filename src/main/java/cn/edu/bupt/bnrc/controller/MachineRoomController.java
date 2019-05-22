@@ -35,7 +35,7 @@ public class MachineRoomController {
     @RequestMapping("/queryAllRoomsAndCabinet")
     @ResponseBody
     @CrossOrigin
-    public Map<String, Object> login(HttpServletRequest request){
+    public Map<String, Object> queryAllRoomsAndCabinet(HttpServletRequest request){
         Map<String,Object> result = new HashMap<>();
         String userId = request.getParameter("user_id");
         List<Machineroom> machineroomList = machineRoomService.queryAllRooms(userId);
@@ -49,5 +49,39 @@ public class MachineRoomController {
         result.put("equipmentList",equipmentList);
 //        System.out.println(equipmentList.get(0));
         return result;
+    }
+
+    @RequestMapping("/insert")
+    @ResponseBody
+    @CrossOrigin
+    public Map<String, String> insertRoom(HttpServletRequest request){
+        Map<String,String> map = new HashMap<>();
+        Map<String,String[]> room = request.getParameterMap();
+        System.out.println("--------"+room.entrySet().toString());
+//        System.out.println("-------"+room.get("equipValue[equipId]")[0]);
+        String mrId = room.get("machineRoom[mrId]")[0];
+        System.out.println("======"+mrId);
+        String mrName = room.get("machineRoom[mrName]")[0];
+        String mrLocation = room.get("machineRoom[mrLocation]")[0];
+        String mrLength = room.get("machineRoom[mrLength]")[0];
+        String mrWidth = room.get("machineRoom[mrWidth]")[0];
+        String mrHeight = room.get("machineRoom[mrHeight]")[0];
+        String userId = room.get("machineRoom[userId]")[0];
+        String mrPicture = "";
+        String mrModel = "";
+        String mrRemark = "";
+
+        Machineroom machineroom = new Machineroom(mrId, userId, mrName, mrLength, mrWidth, mrHeight, mrPicture, mrModel, mrLocation, mrRemark);
+        System.out.println(machineroom.toString());
+        String key = "result";
+        String value ;
+        try{
+            machineRoomService.insertRoom(machineroom);
+            value = "true";
+        }catch (Exception e){
+            value = "false";
+        }
+        map.put(key,value);
+        return map;
     }
 }

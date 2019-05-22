@@ -2,7 +2,6 @@ package cn.edu.bupt.bnrc.dao;
 
 import cn.edu.bupt.bnrc.pojo.EquipmentCabinet;
 import cn.edu.bupt.bnrc.pojo.EquipmentCabinetExample;
-import cn.edu.bupt.bnrc.pojo.EquipmentCabinetKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -11,7 +10,7 @@ public interface EquipmentCabinetMapper {
 
     int deleteByExample(EquipmentCabinetExample example);
 
-    int deleteByPrimaryKey(EquipmentCabinetKey key);
+    int deleteByPrimaryKey(String equipCabId);
 
     int insert(EquipmentCabinet record);
 
@@ -19,7 +18,7 @@ public interface EquipmentCabinetMapper {
 
     List<EquipmentCabinet> selectByExample(EquipmentCabinetExample example);
 
-    EquipmentCabinet selectByPrimaryKey(EquipmentCabinetKey key);
+    EquipmentCabinet selectByPrimaryKey(String equipCabId);
 
     int updateByExampleSelective(@Param("record") EquipmentCabinet record, @Param("example") EquipmentCabinetExample example);
 
