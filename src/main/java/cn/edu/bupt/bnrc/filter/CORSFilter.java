@@ -15,7 +15,8 @@ public class CORSFilter implements Filter {
         HttpServletRequest request=(HttpServletRequest)req;
         // 处理简单请求
         // 跨域请求默认不携带cookie,如果要携带cookie，需要设置下边2个响应头
-        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));// 必选，所有有效的跨域响应都必须包含这个请求头
+//        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:8080");//必选，所有有效的跨域响应都必须包含这个请求头
         // , 没有的话会导致跨域请求失败
         response.setHeader("Access-Control-Allow-Credentials", "true");//可选，此处设置为true,对应前端 xhr.withCredentials = true;
         //处理非简单请求
