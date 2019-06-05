@@ -280,18 +280,18 @@
       <resource>
         <directory>src/main/resources</directory>
         <includes>
-          <include>*</include>
-          <include>*/*</include>
+          <include>*.*</include>
+          <include>*/*.*</include>
         </includes>
         <filtering>false</filtering>
       </resource>
       <!--xml编译到源码下面 -->
-<!--      <resource>-->
-<!--        <directory>src/main/java</directory>-->
-<!--        <includes>-->
-<!--          <include>**/*.xml</include>-->
-<!--        </includes>-->
-<!--      </resource>-->
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
     </resources>
   </build>
 </project>
