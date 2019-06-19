@@ -1,7 +1,5 @@
 package cn.edu.bupt.bnrc.controller;
 
-import cn.edu.bupt.bnrc.pojo.Equipment;
-import cn.edu.bupt.bnrc.pojo.EquipmentDetection;
 import cn.edu.bupt.bnrc.service.impl.MqTestImpl;
 import cn.edu.bupt.bnrc.service.interfaces.MqTest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.crypto.Data;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ public class DeviceController {
     @ResponseBody
     public Map<String,String> upload(String fileBase64, String user_id){
 //        Enumeration paramNames = request.getParameterNames();
-//        while(paramNames.hasMoreElements()) {
+//            while(paramNames.hasMoreElements()) {
 //            String paramName = (String)paramNames.nextElement();
 //            System.out.println(paramName+": "+request.getParameter(paramName));
 //        }
@@ -48,21 +48,30 @@ public class DeviceController {
         BASE64Decoder decoder = new BASE64Decoder();
         try {
             // Base64解码
+            System.out.println("----------------------------1");
             byte[] b = decoder.decodeBuffer(file);
             for (int i = 0; i < b.length; ++i) {
                 if (b[i] < 0) {// 调整异常数据
                     b[i] += 256;
                 }
             }
-            value = String.valueOf(System.currentTimeMillis()) + " " + user_id;
+            System.out.println("----------------------------2");
+            Long timeStamp = System.currentTimeMillis();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date date = new Date(timeStamp);
+//            value = simpleDateFormat.format(date);
+            value = String.valueOf(System.currentTimeMillis());
             resultMap.put(key,value);
+            System.out.println("----------------------------3"+value);
+
             // 生成jpeg图片
-            String imgFilePath = "C:\\Users\\Fecinly\\Desktop\\machinePicture\\"+value+".jpg";// 新生成的图片
+            String imgFilePath = "C:\\Users\\Fecinly\\Desktop\\machinePicture\\"+timeStamp+".jpg";// 新生成的图片
             OutputStream out = new FileOutputStream(imgFilePath);
             out.write(b);
             out.flush();
             out.close();
-            mqTest.sendMessage(value);
+            System.out.println("----------写图片");
+            mqTest.sendMessage(value + " " + user_id);
             return resultMap;
         } catch (Exception e) {
             resultMap.put(key,value);

@@ -1,11 +1,11 @@
 package cn.edu.bupt.bnrc.pojo;
 
 public class Equipment {
-    private String equipId;
+    private Integer equipId;
 
-    private String equipCabId;
+    private Integer cabId;
 
-    private String mrId;
+    private Integer mrId;
 
     private String equipName;
 
@@ -27,9 +27,11 @@ public class Equipment {
 
     private String equipRemark;
 
-    public Equipment(String equipId, String equipCabId, String mrId, String equipName, String equipLength, String equipWidth, String equipHeight, String equipBrand, String equipVersion, String equipLocation, String equipPicture, String equipType, String equipRemark) {
+    private String equipExtra;
+
+    public Equipment(Integer equipId, Integer cabId, Integer mrId, String equipName, String equipLength, String equipWidth, String equipHeight, String equipBrand, String equipVersion, String equipLocation, String equipPicture, String equipType, String equipRemark, String equipExtra) {
         this.equipId = equipId;
-        this.equipCabId = equipCabId;
+        this.cabId = cabId;
         this.mrId = mrId;
         this.equipName = equipName;
         this.equipLength = equipLength;
@@ -41,49 +43,31 @@ public class Equipment {
         this.equipPicture = equipPicture;
         this.equipType = equipType;
         this.equipRemark = equipRemark;
+        this.equipExtra = equipExtra;
     }
 
-    @Override
-    public String toString() {
-        return "Equipment{" +
-                "equipId='" + equipId + '\'' +
-                ", equipCabId='" + equipCabId + '\'' +
-                ", mrId='" + mrId + '\'' +
-                ", equipName='" + equipName + '\'' +
-                ", equipLength='" + equipLength + '\'' +
-                ", equipWidth='" + equipWidth + '\'' +
-                ", equipHeight='" + equipHeight + '\'' +
-                ", equipBrand='" + equipBrand + '\'' +
-                ", equipVersion='" + equipVersion + '\'' +
-                ", equipLocation='" + equipLocation + '\'' +
-                ", equipPicture='" + equipPicture + '\'' +
-                ", equipType='" + equipType + '\'' +
-                ", equipRemark='" + equipRemark + '\'' +
-                '}';
-    }
-
-    public String getEquipId() {
+    public Integer getEquipId() {
         return equipId;
     }
 
-    public void setEquipId(String equipId) {
-        this.equipId = equipId == null ? null : equipId.trim();
+    public void setEquipId(Integer equipId) {
+        this.equipId = equipId;
     }
 
-    public String getEquipCabId() {
-        return equipCabId;
+    public Integer getCabId() {
+        return cabId;
     }
 
-    public void setEquipCabId(String equipCabId) {
-        this.equipCabId = equipCabId == null ? null : equipCabId.trim();
+    public void setCabId(Integer cabId) {
+        this.cabId = cabId;
     }
 
-    public String getMrId() {
+    public Integer getMrId() {
         return mrId;
     }
 
-    public void setMrId(String mrId) {
-        this.mrId = mrId == null ? null : mrId.trim();
+    public void setMrId(Integer mrId) {
+        this.mrId = mrId;
     }
 
     public String getEquipName() {
@@ -164,5 +148,13 @@ public class Equipment {
 
     public void setEquipRemark(String equipRemark) {
         this.equipRemark = equipRemark == null ? null : equipRemark.trim();
+    }
+
+    public String getEquipExtra() {
+        return equipExtra;
+    }
+
+    public void setEquipExtra(String equipExtra) {
+        this.equipExtra = equipExtra == null ? null : equipExtra.trim();
     }
 }

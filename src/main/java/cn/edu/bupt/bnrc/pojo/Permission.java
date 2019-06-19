@@ -1,28 +1,20 @@
 package cn.edu.bupt.bnrc.pojo;
 
 public class Permission {
-    private String perId;
-
-    private String roleId;
+    private Integer perId;
 
     private String perUrl;
 
     private String perRemark;
 
-    public String getPerId() {
+    private String perExtra;
+
+    public Integer getPerId() {
         return perId;
     }
 
-    public void setPerId(String perId) {
-        this.perId = perId == null ? null : perId.trim();
-    }
-
-    public String getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(String roleId) {
-        this.roleId = roleId == null ? null : roleId.trim();
+    public void setPerId(Integer perId) {
+        this.perId = perId;
     }
 
     public String getPerUrl() {
@@ -39,5 +31,13 @@ public class Permission {
 
     public void setPerRemark(String perRemark) {
         this.perRemark = perRemark == null ? null : perRemark.trim();
+    }
+
+    public String getPerExtra() {
+        return perExtra;
+    }
+
+    public void setPerExtra(String perExtra) {
+        this.perExtra = perExtra == null ? null : perExtra.trim();
     }
 }

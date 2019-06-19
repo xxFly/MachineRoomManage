@@ -2,6 +2,7 @@ package cn.edu.bupt.bnrc.shiro;
 
 import cn.edu.bupt.bnrc.pojo.Permission;
 import cn.edu.bupt.bnrc.pojo.User;
+import cn.edu.bupt.bnrc.service.impl.ShiroServiceImpl;
 import cn.edu.bupt.bnrc.service.interfaces.ShiroService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -16,7 +17,7 @@ import java.util.List;
 public class ShiroReaml extends AuthorizingRealm {
 
     @Autowired
-    private ShiroService shiroService;
+    private ShiroService shiroService = new ShiroServiceImpl();
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection pc) {
@@ -30,11 +31,13 @@ public class ShiroReaml extends AuthorizingRealm {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         //获取permission
         if(user!=null) {
-            List<Permission> permissionsByUser = shiroService.getPermissionsByUser(user);
-            if (permissionsByUser.size()!=0) {
-                for (Permission p: permissionsByUser) {
-
-                    info.addStringPermission(p.getPerUrl());
+            int roleId = shiroService.getUserRoleByUserId(user.getUserId());
+            List<Integer> permissionIds = shiroService.getPermissionIdsByRoleId(roleId);
+            Permission permission ;
+            if (permissionIds.size()!=0) {
+                for (int permissionId: permissionIds) {
+                    permission = shiroService.getPermissionById(permissionId);
+                    info.addStringPermission(permission.getPerUrl());
                 }
                 return info;
             }

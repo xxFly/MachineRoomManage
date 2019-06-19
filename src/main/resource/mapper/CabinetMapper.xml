@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.bupt.bnrc.dao.CabinetMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.bupt.bnrc.pojo.Cabinet" >
+    <id column="cab_id" property="cabId" jdbcType="INTEGER" />
+    <result column="mr_id" property="mrId" jdbcType="INTEGER" />
+    <result column="cab_name" property="cabName" jdbcType="VARCHAR" />
+    <result column="cab_length" property="cabLength" jdbcType="VARCHAR" />
+    <result column="cab_width" property="cabWidth" jdbcType="VARCHAR" />
+    <result column="cab_height" property="cabHeight" jdbcType="VARCHAR" />
+    <result column="cab_unit_num" property="cabUnitNum" jdbcType="VARCHAR" />
+    <result column="cab_location" property="cabLocation" jdbcType="VARCHAR" />
+    <result column="cab_remark" property="cabRemark" jdbcType="VARCHAR" />
+    <result column="cab_extra" property="cabExtra" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    cab_id, mr_id, cab_name, cab_length, cab_width, cab_height, cab_unit_num, cab_location, 
+    cab_remark, cab_extra
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.edu.bupt.bnrc.pojo.CabinetExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cabinet
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from cabinet
+    where cab_id = #{cabId,jdbcType=INTEGER}
+  </select>
+
+  <select id="getIdByRoomidAndCabname" resultType="java.lang.Integer" >
+    select
+    cab_id
+    from cabinet
+    where mr_id = #{mrId} and cab_name = #{cabName}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from cabinet
+    where cab_id = #{cabId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.edu.bupt.bnrc.pojo.CabinetExample" >
+    delete from cabinet
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.edu.bupt.bnrc.pojo.Cabinet" >
+    insert into cabinet (cab_id, mr_id, cab_name, 
+      cab_length, cab_width, cab_height, 
+      cab_unit_num, cab_location, cab_remark, 
+      cab_extra)
+    values (#{cabId,jdbcType=INTEGER}, #{mrId,jdbcType=INTEGER}, #{cabName,jdbcType=VARCHAR}, 
+      #{cabLength,jdbcType=VARCHAR}, #{cabWidth,jdbcType=VARCHAR}, #{cabHeight,jdbcType=VARCHAR}, 
+      #{cabUnitNum,jdbcType=VARCHAR}, #{cabLocation,jdbcType=VARCHAR}, #{cabRemark,jdbcType=VARCHAR}, 
+      #{cabExtra,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.bupt.bnrc.pojo.Cabinet" >
+    insert into cabinet
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cabId != null" >
+        cab_id,
+      </if>
+      <if test="mrId != null" >
+        mr_id,
+      </if>
+      <if test="cabName != null" >
+        cab_name,
+      </if>
+      <if test="cabLength != null" >
+        cab_length,
+      </if>
+      <if test="cabWidth != null" >
+        cab_width,
+      </if>
+      <if test="cabHeight != null" >
+        cab_height,
+      </if>
+      <if test="cabUnitNum != null" >
+        cab_unit_num,
+      </if>
+      <if test="cabLocation != null" >
+        cab_location,
+      </if>
+      <if test="cabRemark != null" >
+        cab_remark,
+      </if>
+      <if test="cabExtra != null" >
+        cab_extra,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cabId != null" >
+        #{cabId,jdbcType=INTEGER},
+      </if>
+      <if test="mrId != null" >
+        #{mrId,jdbcType=INTEGER},
+      </if>
+      <if test="cabName != null" >
+        #{cabName,jdbcType=VARCHAR},
+      </if>
+      <if test="cabLength != null" >
+        #{cabLength,jdbcType=VARCHAR},
+      </if>
+      <if test="cabWidth != null" >
+        #{cabWidth,jdbcType=VARCHAR},
+      </if>
+      <if test="cabHeight != null" >
+        #{cabHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="cabUnitNum != null" >
+        #{cabUnitNum,jdbcType=VARCHAR},
+      </if>
+      <if test="cabLocation != null" >
+        #{cabLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="cabRemark != null" >
+        #{cabRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="cabExtra != null" >
+        #{cabExtra,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.edu.bupt.bnrc.pojo.CabinetExample" resultType="java.lang.Integer" >
+    select count(*) from cabinet
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update cabinet
+    <set >
+      <if test="record.cabId != null" >
+        cab_id = #{record.cabId,jdbcType=INTEGER},
+      </if>
+      <if test="record.mrId != null" >
+        mr_id = #{record.mrId,jdbcType=INTEGER},
+      </if>
+      <if test="record.cabName != null" >
+        cab_name = #{record.cabName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabLength != null" >
+        cab_length = #{record.cabLength,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabWidth != null" >
+        cab_width = #{record.cabWidth,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabHeight != null" >
+        cab_height = #{record.cabHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabUnitNum != null" >
+        cab_unit_num = #{record.cabUnitNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabLocation != null" >
+        cab_location = #{record.cabLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabRemark != null" >
+        cab_remark = #{record.cabRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cabExtra != null" >
+        cab_extra = #{record.cabExtra,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update cabinet
+    set cab_id = #{record.cabId,jdbcType=INTEGER},
+      mr_id = #{record.mrId,jdbcType=INTEGER},
+      cab_name = #{record.cabName,jdbcType=VARCHAR},
+      cab_length = #{record.cabLength,jdbcType=VARCHAR},
+      cab_width = #{record.cabWidth,jdbcType=VARCHAR},
+      cab_height = #{record.cabHeight,jdbcType=VARCHAR},
+      cab_unit_num = #{record.cabUnitNum,jdbcType=VARCHAR},
+      cab_location = #{record.cabLocation,jdbcType=VARCHAR},
+      cab_remark = #{record.cabRemark,jdbcType=VARCHAR},
+      cab_extra = #{record.cabExtra,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.bupt.bnrc.pojo.Cabinet" >
+    update cabinet
+    <set >
+      <if test="mrId != null" >
+        mr_id = #{mrId,jdbcType=INTEGER},
+      </if>
+      <if test="cabName != null" >
+        cab_name = #{cabName,jdbcType=VARCHAR},
+      </if>
+      <if test="cabLength != null" >
+        cab_length = #{cabLength,jdbcType=VARCHAR},
+      </if>
+      <if test="cabWidth != null" >
+        cab_width = #{cabWidth,jdbcType=VARCHAR},
+      </if>
+      <if test="cabHeight != null" >
+        cab_height = #{cabHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="cabUnitNum != null" >
+        cab_unit_num = #{cabUnitNum,jdbcType=VARCHAR},
+      </if>
+      <if test="cabLocation != null" >
+        cab_location = #{cabLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="cabRemark != null" >
+        cab_remark = #{cabRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="cabExtra != null" >
+        cab_extra = #{cabExtra,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cab_id = #{cabId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.bupt.bnrc.pojo.Cabinet" >
+    update cabinet
+    set mr_id = #{mrId,jdbcType=INTEGER},
+      cab_name = #{cabName,jdbcType=VARCHAR},
+      cab_length = #{cabLength,jdbcType=VARCHAR},
+      cab_width = #{cabWidth,jdbcType=VARCHAR},
+      cab_height = #{cabHeight,jdbcType=VARCHAR},
+      cab_unit_num = #{cabUnitNum,jdbcType=VARCHAR},
+      cab_location = #{cabLocation,jdbcType=VARCHAR},
+      cab_remark = #{cabRemark,jdbcType=VARCHAR},
+      cab_extra = #{cabExtra,jdbcType=VARCHAR}
+    where cab_id = #{cabId,jdbcType=INTEGER}
+  </update>
+</mapper>

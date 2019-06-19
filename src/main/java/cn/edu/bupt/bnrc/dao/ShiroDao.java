@@ -20,17 +20,20 @@ public interface ShiroDao {
     User getUserByUserName(String username);
 
     /**
-     * 根据角色id获取该账号的权限
+     * 根据username获取角色id
+     * @param userId
+     * @return LIST
+     */
+    int getUserRoleByUserId(int userId);
+
+
+    /**
+     * 根据角色id获取该账号的权限id
      * @param roleId
      * @return List
      */
-    List<Permission> getPermissionsByRoleId(String roleId);
+    List<Integer> getPermissionIdsByRoleId(int roleId);
 
-    /**
-     * 根据userId获取角色id
-     * @param id
-     * @return LIST
-     */
-    List<String> getUserRoleByUserId(String id);
+    Permission getPermissionById (int permissionIds);
 
 }

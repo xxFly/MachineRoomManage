@@ -21,24 +21,29 @@ public class ShiroServiceImpl implements ShiroService {
 
     public User getUserByUserName(String username) {
         //根据账号获取账号密码
-        User userByUserName = shiroDao.getUserByUserName(username);
-        return userByUserName;
+        return shiroDao.getUserByUserName(username);
     }
 
-    public List<Permission> getPermissionsByUser(User user) {
+    public int getUserRoleByUserId(int userId){
+        return shiroDao.getUserRoleByUserId(userId);
+    }
+    public List<Integer> getPermissionIdsByRoleId(int roleId) {
         //获取到用户角色userRole
-        List<String> roleId = shiroDao.getUserRoleByUserId(user.getUserId());
-        List<Permission> perArrary = new ArrayList<Permission>();
+        List<Integer> permissionIds = new ArrayList<Integer>();
+        permissionIds = shiroDao.getPermissionIdsByRoleId(roleId);
+//        if (roleId!=null&&roleId.size()!=0) {
+//            //根据roleid获取peimission
+//            for (String i : roleId) {
+//                perArrary.addAll(shiroDao.getPermissionsByRoleId(i));
+//            }
+//        }
 
-        if (roleId!=null&&roleId.size()!=0) {
-            //根据roleid获取peimission
-            for (String i : roleId) {
-                perArrary.addAll(shiroDao.getPermissionsByRoleId(i));
-            }
-        }
+        System.out.println(permissionIds);
+        return permissionIds;
+    }
 
-        System.out.println(perArrary);
-        return perArrary;
+    public Permission getPermissionById(int permissionId){
+        return shiroDao.getPermissionById(permissionId);
     }
 
 

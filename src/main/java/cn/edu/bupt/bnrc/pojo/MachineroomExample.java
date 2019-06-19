@@ -114,62 +114,52 @@ public class MachineroomExample {
             return (Criteria) this;
         }
 
-        public Criteria andMrIdEqualTo(String value) {
+        public Criteria andMrIdEqualTo(Integer value) {
             addCriterion("mr_id =", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdNotEqualTo(String value) {
+        public Criteria andMrIdNotEqualTo(Integer value) {
             addCriterion("mr_id <>", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdGreaterThan(String value) {
+        public Criteria andMrIdGreaterThan(Integer value) {
             addCriterion("mr_id >", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdGreaterThanOrEqualTo(String value) {
+        public Criteria andMrIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("mr_id >=", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdLessThan(String value) {
+        public Criteria andMrIdLessThan(Integer value) {
             addCriterion("mr_id <", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdLessThanOrEqualTo(String value) {
+        public Criteria andMrIdLessThanOrEqualTo(Integer value) {
             addCriterion("mr_id <=", value, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdLike(String value) {
-            addCriterion("mr_id like", value, "mrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andMrIdNotLike(String value) {
-            addCriterion("mr_id not like", value, "mrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andMrIdIn(List<String> values) {
+        public Criteria andMrIdIn(List<Integer> values) {
             addCriterion("mr_id in", values, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdNotIn(List<String> values) {
+        public Criteria andMrIdNotIn(List<Integer> values) {
             addCriterion("mr_id not in", values, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdBetween(String value1, String value2) {
+        public Criteria andMrIdBetween(Integer value1, Integer value2) {
             addCriterion("mr_id between", value1, value2, "mrId");
             return (Criteria) this;
         }
 
-        public Criteria andMrIdNotBetween(String value1, String value2) {
+        public Criteria andMrIdNotBetween(Integer value1, Integer value2) {
             addCriterion("mr_id not between", value1, value2, "mrId");
             return (Criteria) this;
         }
@@ -184,62 +174,52 @@ public class MachineroomExample {
             return (Criteria) this;
         }
 
-        public Criteria andUserIdEqualTo(String value) {
+        public Criteria andUserIdEqualTo(Integer value) {
             addCriterion("user_id =", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotEqualTo(String value) {
+        public Criteria andUserIdNotEqualTo(Integer value) {
             addCriterion("user_id <>", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThan(String value) {
+        public Criteria andUserIdGreaterThan(Integer value) {
             addCriterion("user_id >", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThanOrEqualTo(String value) {
+        public Criteria andUserIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("user_id >=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThan(String value) {
+        public Criteria andUserIdLessThan(Integer value) {
             addCriterion("user_id <", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThanOrEqualTo(String value) {
+        public Criteria andUserIdLessThanOrEqualTo(Integer value) {
             addCriterion("user_id <=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLike(String value) {
-            addCriterion("user_id like", value, "userId");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserIdNotLike(String value) {
-            addCriterion("user_id not like", value, "userId");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserIdIn(List<String> values) {
+        public Criteria andUserIdIn(List<Integer> values) {
             addCriterion("user_id in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotIn(List<String> values) {
+        public Criteria andUserIdNotIn(List<Integer> values) {
             addCriterion("user_id not in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdBetween(String value1, String value2) {
+        public Criteria andUserIdBetween(Integer value1, Integer value2) {
             addCriterion("user_id between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotBetween(String value1, String value2) {
+        public Criteria andUserIdNotBetween(Integer value1, Integer value2) {
             addCriterion("user_id not between", value1, value2, "userId");
             return (Criteria) this;
         }
@@ -801,6 +781,76 @@ public class MachineroomExample {
 
         public Criteria andMrRemarkNotBetween(String value1, String value2) {
             addCriterion("mr_remark not between", value1, value2, "mrRemark");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraIsNull() {
+            addCriterion("mr_extra is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraIsNotNull() {
+            addCriterion("mr_extra is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraEqualTo(String value) {
+            addCriterion("mr_extra =", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraNotEqualTo(String value) {
+            addCriterion("mr_extra <>", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraGreaterThan(String value) {
+            addCriterion("mr_extra >", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraGreaterThanOrEqualTo(String value) {
+            addCriterion("mr_extra >=", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraLessThan(String value) {
+            addCriterion("mr_extra <", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraLessThanOrEqualTo(String value) {
+            addCriterion("mr_extra <=", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraLike(String value) {
+            addCriterion("mr_extra like", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraNotLike(String value) {
+            addCriterion("mr_extra not like", value, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraIn(List<String> values) {
+            addCriterion("mr_extra in", values, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraNotIn(List<String> values) {
+            addCriterion("mr_extra not in", values, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraBetween(String value1, String value2) {
+            addCriterion("mr_extra between", value1, value2, "mrExtra");
+            return (Criteria) this;
+        }
+
+        public Criteria andMrExtraNotBetween(String value1, String value2) {
+            addCriterion("mr_extra not between", value1, value2, "mrExtra");
             return (Criteria) this;
         }
     }

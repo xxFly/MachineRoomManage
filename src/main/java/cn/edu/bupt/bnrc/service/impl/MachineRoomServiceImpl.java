@@ -25,17 +25,17 @@ public class MachineRoomServiceImpl implements MachineRoomService {
     }
 
     @Override
-    public Machineroom selectByRoom(Machineroom machineroom) {
-        return null;
+    public Machineroom selectByRoomname(String mrName) {
+        return machineroomMapper.selectByRoomname(mrName);
     }
 
     @Override
-    public List<Machineroom> queryAllRooms(String userId) {
+    public List<Machineroom> queryAllRooms(int userId) {
         return machineroomMapper.queryAllRooms(userId);
     }
 
     @Override
-    public List<String> queryAllRoomIds(String userId) {
+    public List<String> queryAllRoomIds(int userId) {
         return machineroomMapper.queryAllRoomIds(userId);
     }
 }

@@ -1,9 +1,7 @@
 package cn.edu.bupt.bnrc.pojo;
 
-import java.io.Serializable;
-
-public class User implements Serializable {
-    private String userId;
+public class User {
+    private Integer userId;
 
     private String userName;
 
@@ -17,13 +15,15 @@ public class User implements Serializable {
 
     private String userSignature;
 
-    private String userAuthority;
+    private Integer userRole;
 
     private String userLastlogin;
 
     private String userRemark;
 
-    public User(String userId, String userName, String userPassword, String userEmail, String userPhone, String userHeadimage, String userSignature, String userAuthority, String userLastlogin, String userRemark) {
+    private String userExtra;
+
+    public User(Integer userId, String userName, String userPassword, String userEmail, String userPhone, String userHeadimage, String userSignature, Integer userRole, String userLastlogin, String userRemark, String userExtra) {
         this.userId = userId;
         this.userName = userName;
         this.userPassword = userPassword;
@@ -31,17 +31,18 @@ public class User implements Serializable {
         this.userPhone = userPhone;
         this.userHeadimage = userHeadimage;
         this.userSignature = userSignature;
-        this.userAuthority = userAuthority;
+        this.userRole = userRole;
         this.userLastlogin = userLastlogin;
         this.userRemark = userRemark;
+        this.userExtra = userExtra;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
@@ -92,12 +93,12 @@ public class User implements Serializable {
         this.userSignature = userSignature == null ? null : userSignature.trim();
     }
 
-    public String getUserAuthority() {
-        return userAuthority;
+    public Integer getUserRole() {
+        return userRole;
     }
 
-    public void setUserAuthority(String userAuthority) {
-        this.userAuthority = userAuthority == null ? null : userAuthority.trim();
+    public void setUserRole(Integer userRole) {
+        this.userRole = userRole;
     }
 
     public String getUserLastlogin() {
@@ -114,5 +115,13 @@ public class User implements Serializable {
 
     public void setUserRemark(String userRemark) {
         this.userRemark = userRemark == null ? null : userRemark.trim();
+    }
+
+    public String getUserExtra() {
+        return userExtra;
+    }
+
+    public void setUserExtra(String userExtra) {
+        this.userExtra = userExtra == null ? null : userExtra.trim();
     }
 }

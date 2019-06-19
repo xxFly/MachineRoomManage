@@ -11,10 +11,10 @@ public interface MachineRoomService {
 
     int updateRoom(Machineroom machineroom);
 
-    Machineroom selectByRoom(Machineroom machineroom);
+    Machineroom selectByRoomname(String mrName);
 
-    List<Machineroom> queryAllRooms(String userId);
+    List<Machineroom> queryAllRooms(int userId);
 
-    List<String> queryAllRoomIds(String userId);
+    List<String> queryAllRoomIds(int userId);
 
 }

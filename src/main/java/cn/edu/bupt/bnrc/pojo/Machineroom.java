@@ -1,9 +1,9 @@
 package cn.edu.bupt.bnrc.pojo;
 
 public class Machineroom {
-    private String mrId;
+    private Integer mrId;
 
-    private String userId;
+    private Integer userId;
 
     private String mrName;
 
@@ -21,7 +21,9 @@ public class Machineroom {
 
     private String mrRemark;
 
-    public Machineroom(String mrId, String userId, String mrName, String mrLength, String mrWidth, String mrHeight, String mrPicture, String mrModel, String mrLocation, String mrRemark) {
+    private String mrExtra;
+
+    public Machineroom(Integer mrId, Integer userId, String mrName, String mrLength, String mrWidth, String mrHeight, String mrPicture, String mrModel, String mrLocation, String mrRemark, String mrExtra) {
         this.mrId = mrId;
         this.userId = userId;
         this.mrName = mrName;
@@ -32,38 +34,23 @@ public class Machineroom {
         this.mrModel = mrModel;
         this.mrLocation = mrLocation;
         this.mrRemark = mrRemark;
+        this.mrExtra = mrExtra;
     }
 
-    @Override
-    public String toString() {
-        return "Machineroom{" +
-                "mrId='" + mrId + '\'' +
-                ", userId='" + userId + '\'' +
-                ", mrName='" + mrName + '\'' +
-                ", mrLength='" + mrLength + '\'' +
-                ", mrWidth='" + mrWidth + '\'' +
-                ", mrHeight='" + mrHeight + '\'' +
-                ", mrPicture='" + mrPicture + '\'' +
-                ", mrModel='" + mrModel + '\'' +
-                ", mrLocation='" + mrLocation + '\'' +
-                ", mrRemark='" + mrRemark + '\'' +
-                '}';
-    }
-
-    public String getMrId() {
+    public Integer getMrId() {
         return mrId;
     }
 
-    public void setMrId(String mrId) {
-        this.mrId = mrId == null ? null : mrId.trim();
+    public void setMrId(Integer mrId) {
+        this.mrId = mrId;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getMrName() {
@@ -128,5 +115,13 @@ public class Machineroom {
 
     public void setMrRemark(String mrRemark) {
         this.mrRemark = mrRemark == null ? null : mrRemark.trim();
+    }
+
+    public String getMrExtra() {
+        return mrExtra;
+    }
+
+    public void setMrExtra(String mrExtra) {
+        this.mrExtra = mrExtra == null ? null : mrExtra.trim();
     }
 }

@@ -10,7 +10,7 @@ public interface EquipmentMapper {
 
     int deleteByExample(EquipmentExample example);
 
-    int deleteByPrimaryKey(String equipId);
+    int deleteByPrimaryKey(Integer equipId);
 
     int insert(Equipment record);
 
@@ -18,7 +18,7 @@ public interface EquipmentMapper {
 
     List<Equipment> selectByExample(EquipmentExample example);
 
-    Equipment selectByPrimaryKey(String equipId);
+    Equipment selectByPrimaryKey(Integer equipId);
 
     int updateByExampleSelective(@Param("record") Equipment record, @Param("example") EquipmentExample example);
 
@@ -29,4 +29,6 @@ public interface EquipmentMapper {
     int updateByPrimaryKey(Equipment record);
 
     List<Equipment> queryByRoomIds(List machineRoomIdList);
+
+    Equipment checkExist(@Param("mrId")int mrId, @Param("cabId")int cabId, @Param("equipName")String equipName);
 }

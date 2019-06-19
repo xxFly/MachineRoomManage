@@ -1,11 +1,14 @@
 package cn.edu.bupt.bnrc.service.impl;
 
 import cn.edu.bupt.bnrc.dao.UserMapper;
-import cn.edu.bupt.bnrc.pojo.EquipmentDetection;
+import cn.edu.bupt.bnrc.pojo.Detection;
 import cn.edu.bupt.bnrc.service.interfaces.EquipmentDetectionService;
 import cn.edu.bupt.bnrc.service.interfaces.EquipmentService;
 import cn.edu.bupt.bnrc.service.interfaces.UserService;
-import org.json.JSONObject;
+//import org.json.JSONArray;
+//import org.json.JSONObject;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
@@ -14,6 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.ByteArrayInputStream;
 import java.io.ObjectInputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MessageConsumer implements MessageListener {
 
@@ -30,8 +35,6 @@ public class MessageConsumer implements MessageListener {
 
     @Override
     public void onMessage(Message message) {
-//        System.out.println("消费消息receive getBody:{}"+message.getBody());
-//        System.out.println("消费消息receive getBody:{}"+message.toString());
         System.out.println("消费消息receive getBody:{}"+message.toString() );
 
 //        System.out.println("receive getMessageProperties:{}"+message.getMessageProperties());
@@ -59,21 +62,25 @@ public class MessageConsumer implements MessageListener {
 //                -----------用户注册
 //        设备检测------------------
 //        调用接口获取json数据
-        String jsonContent = "{'equip_brand':'a','equip_version':'1','equip_location':'1'}";
-        JSONObject jsonObject = new JSONObject(jsonContent);
-//        String equip_time = message.toString();
-        String equip_time = message.toString().split("'")[1].split(" ")[0];
-        String user_id = message.toString().split("'")[1].split(" ")[1];
-        System.out.println(user_id);
-        String equip_brand = jsonObject.getString("equip_brand");
-        String equip_version = jsonObject.getString("equip_version");
-        String equip_location = jsonObject.getString("equip_location");
-        EquipmentDetection equipmentDetection = new EquipmentDetection(equip_time, user_id, equip_brand,equip_version,equip_location);
-        equipmentDetecionService.insertEquipmentDetection(equipmentDetection);
-//        System.out.println(equipmentDetection.toString());
-//                ------------------设备检测
+        String jsonContent = "[{'detect_brand':'a','detect_version':'1','detect_location':'1'},{'detect_brand':'b','detect_version':'2','detect_location':'2'}]";
+        JSONArray jsonArray = JSONArray.parseArray(jsonContent);
+        for(int i = 0; i < jsonArray.size(); i++){
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            int detect_id = 0;
+            String detect_time = message.toString().split("'")[1].split(" ")[0]+"_"+i;
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        Date date = new Date(Long.parseLong(detect_time));
+//        String timeStamp = simpleDateFormat.format(date);
 
-
+            int user_id = Integer.parseInt(message.toString().split("'")[1].split(" ")[1]);
+            System.out.println(user_id);
+            String detect_brand = jsonObject.getString("detect_brand");
+            String detect_version = jsonObject.getString("detect_version");
+            String detect_location = jsonObject.getString("detect_location");
+            String detect_extra = "";
+            Detection detection = new Detection(detect_id, user_id, detect_brand, detect_version, detect_location, detect_time, detect_extra);
+            equipmentDetecionService.insertEquipmentDetection(detection);
+        }
     }
 
     //字节码转化为对象

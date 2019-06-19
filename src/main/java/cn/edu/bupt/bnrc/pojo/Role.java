@@ -1,18 +1,18 @@
 package cn.edu.bupt.bnrc.pojo;
 
 public class Role {
-    private String roleId;
+    private Integer roleId;
 
     private String roleName;
 
     private String roleRemark;
 
-    public String getRoleId() {
+    public Integer getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(String roleId) {
-        this.roleId = roleId == null ? null : roleId.trim();
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
     }
 
     public String getRoleName() {

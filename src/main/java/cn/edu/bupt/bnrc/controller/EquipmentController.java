@@ -1,9 +1,11 @@
 package cn.edu.bupt.bnrc.controller;
 
 import cn.edu.bupt.bnrc.pojo.Equipment;
-import cn.edu.bupt.bnrc.pojo.EquipmentDetection;
+import cn.edu.bupt.bnrc.pojo.Machineroom;
 import cn.edu.bupt.bnrc.service.impl.EquipmentServiceImpl;
+import cn.edu.bupt.bnrc.service.interfaces.CabinetService;
 import cn.edu.bupt.bnrc.service.interfaces.EquipmentService;
+import cn.edu.bupt.bnrc.service.interfaces.MachineRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,6 +21,10 @@ import java.util.Map;
 public class EquipmentController {
     @Autowired
     private EquipmentService equipmentService = new EquipmentServiceImpl();
+    @Autowired
+    private MachineRoomService machineRoomService;
+    @Autowired
+    private CabinetService cabinetService;
 
     @RequestMapping("/edit")
     @CrossOrigin
@@ -28,9 +34,9 @@ public class EquipmentController {
         Map<String,String[]> equip = request.getParameterMap();
         System.out.println(equip.entrySet().toString());
         System.out.println("-------"+equip.get("equipValue[equipId]")[0]);
-        String equipId = equip.get("equipValue[equipId]")[0];
-        String equipCabId = equip.get("equipValue[equipCabId]")[0];
-        String mrId = equip.get("equipValue[mrId]")[0];
+        int equipId = 0;
+        int equipCabId = Integer.parseInt(equip.get("equipValue[equipCabId]")[0]);
+        int mrId = Integer.parseInt(equip.get("equipValue[mrId]")[0]);
         String equipName = equip.get("equipValue[equipName]")[0];
         String equipLength = "";
         String equipWidth = "";
@@ -41,10 +47,11 @@ public class EquipmentController {
         String equipPicture = "";
         String equipType = equip.get("equipValue[equipType]")[0];
         String equipRemark = "";
+        String equipExtra = "";
 //        String equipTime = equip.get("equipValue[equipTime]")[0];
 //        String userId = equip.get("equipValue[userId]")[0];
         Equipment equipment = new Equipment(equipId, equipCabId, mrId, equipName,
-                equipLength, equipWidth, equipHeight, equipBrand, equipVersion, equipLocation, equipPicture, equipType, equipRemark);
+                equipLength, equipWidth, equipHeight, equipBrand, equipVersion, equipLocation, equipPicture, equipType, equipRemark, equipExtra);
         String key = "result";
         String value ;
         try{
@@ -60,7 +67,7 @@ public class EquipmentController {
     @RequestMapping("/delete")
     @CrossOrigin
     @ResponseBody
-    public Map<String,String> deleteEquipment(String deviceId){
+    public Map<String,String> deleteEquipment(int deviceId){
         Map<String,String> map = new HashMap<>();
         System.out.println("-----------"+deviceId);
         String key = "result";
@@ -82,10 +89,18 @@ public class EquipmentController {
         Map<String,String> map = new HashMap<>();
         Map<String,String[]> equip = request.getParameterMap();
         System.out.println(equip.entrySet().toString());
-        System.out.println("-------"+equip.get("equipValue[equipId]")[0]);
-        String equipId = equip.get("equipValue[equipId]")[0];
-        String equipCabId = equip.get("equipValue[equipCabId]")[0];
-        String mrId = equip.get("equipValue[mrId]")[0];
+//        System.out.println("-------"+equip.get("equipValue[equipId]")[0]);
+//        int equipId = equip.get("equipValue[equipId]")[0];
+        int equipId = 0;
+        String equipCabName = equip.get("equipValue[equipCabName]")[0];
+        String mrName = equip.get("equipValue[mrName]")[0];
+        System.out.println("================");
+        System.out.println(mrName);
+        Machineroom mr = machineRoomService.selectByRoomname(mrName);
+        int mrId = mr.getMrId();
+        System.out.println("================");
+        System.out.println(mrId);
+        int equipCabId = cabinetService.getIdByRoomidAndCabname(mrId, equipCabName);
         String equipName = equip.get("equipValue[equipName]")[0];
         String equipLength = "";
         String equipWidth = "";
@@ -96,18 +111,25 @@ public class EquipmentController {
         String equipPicture = "";
         String equipType = equip.get("equipValue[equipType]")[0];
         String equipRemark = "";
+        String equipExtra = "";
 //        String equipTime = equip.get("equipValue[equipTime]")[0];
 //        String userId = equip.get("equipValue[userId]")[0];
         Equipment equipment = new Equipment(equipId, equipCabId, mrId, equipName,
-                equipLength, equipWidth, equipHeight, equipBrand, equipVersion, equipLocation, equipPicture, equipType, equipRemark);
+                equipLength, equipWidth, equipHeight, equipBrand, equipVersion, equipLocation, equipPicture, equipType, equipRemark, equipExtra);
         String key = "result";
         String value ;
-        try{
-            equipmentService.insertEquipment(equipment);
-            value = "true";
-        }catch (Exception e){
-            value = "false";
+        Equipment eq = equipmentService.checkExist(mrId, equipCabId, equipName);
+        if(eq == null){
+            try{
+                equipmentService.insertEquipment(equipment);
+                value = "添加成功";
+            }catch (Exception e){
+                value = "添加失败";
+            }
+        }else {
+            value = "该设备已存在";
         }
+
         map.put(key,value);
         return map;
     }

@@ -18,11 +18,15 @@ public interface ShiroService {
      */
      User getUserByUserName(String username);
 
+     int getUserRoleByUserId(int userId);
+
     /**
      * 根据账号获取该账号的权限
      *
-     * @param user
+     * @param roleId
      * @return List
      */
-    List<Permission> getPermissionsByUser(User user);
+    List<Integer> getPermissionIdsByRoleId(int roleId);
+
+    Permission getPermissionById (int permissionIds);
 }

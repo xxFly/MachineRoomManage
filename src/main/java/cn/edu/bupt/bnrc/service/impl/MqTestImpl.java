@@ -18,6 +18,6 @@ public class MqTestImpl implements MqTest {
     public void sendMessage(Object message) {
         System.out.println("---------------------send message:"+ message);
 //        System.out.println("---------------------send message:"+ message.toString());
-        amqpTemplate.convertAndSend("queue_1_key",message);
+        amqpTemplate.convertAndSend("clientRequestQueueKey",message);
     }
 }

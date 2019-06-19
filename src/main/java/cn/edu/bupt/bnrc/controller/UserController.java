@@ -11,6 +11,7 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -46,7 +47,8 @@ public class UserController {
     @RequestMapping("/doLogin")
     @ResponseBody
     @CrossOrigin
-    public Map<String,String> login(String user_id, String user_password, HttpSession session, Model model){
+    public Map<String,String> login(String user_name, String user_password, HttpSession session, Model model){
+//
 //        HttpServletRequest request
 
 //        String s = "SSM vue前后端框架搭建成功";
@@ -57,7 +59,7 @@ public class UserController {
 //        User user = new User();
 //        user.setUserId(userID);
 //        user.setUserPassword(userPassword);
-        System.out.println("-------------"+user_id+user_password);
+        System.out.println("-------------"+user_name+user_password);
 //        User u = userService.selectByUser(user);
 //        return u;
         Map<String,String> result = new HashMap<String,String>();
@@ -75,7 +77,7 @@ public class UserController {
 //        return m;
 
         //SSM本地测试
-        if(user_id==null){
+        if(user_name==null){
             model.addAttribute("message", "账号不为空");
 //            return "/user/login";
             result.put(key,value);
@@ -85,15 +87,14 @@ public class UserController {
         //主体,当前状态为没有认证的状态“未认证”
         Subject subject = SecurityUtils.getSubject();
         // 登录后存放进shiro token
-        UsernamePasswordToken token=new UsernamePasswordToken(user_id,user_password);
+        UsernamePasswordToken token=new UsernamePasswordToken(user_name,user_password);
         User user;
         //登录方法（认证是否通过）
         //使用subject调用securityManager,安全管理器调用Realm
-
+        userService.selectUseridByUsername(user_name);
             //利用异常操作
             //需要开始调用到Realm中
-            System.out.println("========================================");
-            System.out.println("1、进入认证方法");
+            System.out.println("=================进入登录=======================");
             try{
                 subject.login(token);
             }catch(Exception e) {
@@ -107,7 +108,6 @@ public class UserController {
             user = (User)subject.getPrincipal();
             session.setAttribute("user",subject);
             model.addAttribute("message", "登录完成");
-            System.out.println("登录完成");
         } catch (UnknownAccountException e) {
             model.addAttribute("message", "账号密码不正确");
             System.out.println("----账号密码不正确");
@@ -152,12 +152,14 @@ public class UserController {
 //        String userPassword = request.getParameter("user_password");
 //        String userEmail = request.getParameter("user_email");
 //        String userPhone = request.getParameter("user_phone");
+        int uid = Integer.parseInt(user_id);
         String user_headImage = "";
 //        String userSignature = request.getParameter("user_signature");
-        String user_authority = "";
+        int user_authority = 1;
         String user_lastLogin = "";
 //        String userRemark = request.getParameter("user_remark");
-        User user = new User(user_id, user_name, user_password, user_email, user_phone, user_headImage, user_signature, user_authority, user_lastLogin, user_remark);
+        String user_extra = "";
+        User user = new User(uid, user_name, user_password, user_email, user_phone, user_headImage, user_signature, user_authority, user_lastLogin, user_remark, user_extra);
 ////        System.out.println("--------------------userID:"+userID);
 //        userService.insertUser(user);
 //        ObjectMapper mapper=new ObjectMapper();
@@ -165,7 +167,7 @@ public class UserController {
 //        byte[] bytes= getBytesFromObject(user);
 //        System.out.println("----------controller send :"+bytes);
 //        amqpTemplate.convertAndSend("exchange","topic.messages",bytes);
-        byte[] bytes=getBytesFromObject(user);
+//        byte[] bytes=getBytesFromObject(user);
 //        mqTest.sendMessage(bytes);
         return result;
     }
@@ -194,7 +196,8 @@ public class UserController {
         Map<String,String> result = new HashMap<String,String>();
         String key = "key";
         String value ;
-        User user = userService.selectByPrimaryKey(user_id);
+        int userId = Integer.parseInt(user_id);
+        User user = userService.selectByPrimaryKey(userId);
         if(user == null){
             value = "false";
         }else{

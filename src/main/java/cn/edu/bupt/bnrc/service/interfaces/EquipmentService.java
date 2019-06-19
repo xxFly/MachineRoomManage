@@ -8,11 +8,13 @@ import java.util.List;
 public interface EquipmentService {
     int insertEquipment(Equipment equipment);
 
-    int deleteEquipmentById(String equipId);
+    int deleteEquipmentById(int equipmentId);
 
     int updateEquipment(Equipment equipment);
 
-    Equipment selectByEquipmentId(String equipmentId);
+    Equipment selectByEquipmentId(int equipmentId);
 
     List<Equipment> queryByRoomIds(List machineRoomIdList);
+
+    Equipment checkExist(int mrId, int cabId, String equipName);
 }

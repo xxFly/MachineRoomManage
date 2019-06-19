@@ -5,8 +5,10 @@ import cn.edu.bupt.bnrc.pojo.Machineroom;
 import cn.edu.bupt.bnrc.pojo.User;
 import cn.edu.bupt.bnrc.service.impl.EquipmentServiceImpl;
 import cn.edu.bupt.bnrc.service.impl.MachineRoomServiceImpl;
+import cn.edu.bupt.bnrc.service.impl.UserServiceImpl;
 import cn.edu.bupt.bnrc.service.interfaces.EquipmentService;
 import cn.edu.bupt.bnrc.service.interfaces.MachineRoomService;
+import cn.edu.bupt.bnrc.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -30,6 +32,9 @@ public class MachineRoomController {
     @Autowired
     private EquipmentService equipmentService = new EquipmentServiceImpl();
 
+    @Autowired
+    private UserService userService = new UserServiceImpl();
+
 
 
     @RequestMapping("/queryAllRoomsAndCabinet")
@@ -37,7 +42,8 @@ public class MachineRoomController {
     @CrossOrigin
     public Map<String, Object> queryAllRoomsAndCabinet(HttpServletRequest request){
         Map<String,Object> result = new HashMap<>();
-        String userId = request.getParameter("user_id");
+        String userName = request.getParameter("user_name");
+        int userId = userService.selectUseridByUsername(userName);
         List<Machineroom> machineroomList = machineRoomService.queryAllRooms(userId);
         List machineroomIdList = machineRoomService.queryAllRoomIds(userId);
 //        System.out.println(machineroomIdList.get(0));
@@ -59,27 +65,34 @@ public class MachineRoomController {
         Map<String,String[]> room = request.getParameterMap();
         System.out.println("--------"+room.entrySet().toString());
 //        System.out.println("-------"+room.get("equipValue[equipId]")[0]);
-        String mrId = room.get("machineRoom[mrId]")[0];
-        System.out.println("======"+mrId);
+//        String mrId = room.get("machineRoom[mrId]")[0];
+        int mrId = 0;
         String mrName = room.get("machineRoom[mrName]")[0];
         String mrLocation = room.get("machineRoom[mrLocation]")[0];
         String mrLength = room.get("machineRoom[mrLength]")[0];
         String mrWidth = room.get("machineRoom[mrWidth]")[0];
         String mrHeight = room.get("machineRoom[mrHeight]")[0];
-        String userId = room.get("machineRoom[userId]")[0];
+        int userId = Integer.parseInt(room.get("machineRoom[userId]")[0]);
         String mrPicture = "";
         String mrModel = "";
         String mrRemark = "";
+        String mrExtra = "";
 
-        Machineroom machineroom = new Machineroom(mrId, userId, mrName, mrLength, mrWidth, mrHeight, mrPicture, mrModel, mrLocation, mrRemark);
+        Machineroom machineroom = new Machineroom(mrId, userId, mrName, mrLength, mrWidth, mrHeight, mrPicture, mrModel, mrLocation, mrRemark, mrExtra);
         System.out.println(machineroom.toString());
         String key = "result";
         String value ;
-        try{
-            machineRoomService.insertRoom(machineroom);
-            value = "true";
-        }catch (Exception e){
-            value = "false";
+        Machineroom m = machineRoomService.selectByRoomname(mrName);
+
+        if(m == null){
+            try{
+                machineRoomService.insertRoom(machineroom);
+                value = "添加成功";
+            }catch (Exception e){
+                value = "插入失败";
+            }
+        }else{
+            value = "该机房已存在";
         }
         map.put(key,value);
         return map;

@@ -10,7 +10,7 @@ public interface MachineroomMapper {
 
     int deleteByExample(MachineroomExample example);
 
-    int deleteByPrimaryKey(String mrId);
+    int deleteByPrimaryKey(Integer mrId);
 
     int insert(Machineroom record);
 
@@ -18,7 +18,7 @@ public interface MachineroomMapper {
 
     List<Machineroom> selectByExample(MachineroomExample example);
 
-    Machineroom selectByPrimaryKey(String mrId);
+    Machineroom selectByPrimaryKey(Integer mrId);
 
     int updateByExampleSelective(@Param("record") Machineroom record, @Param("example") MachineroomExample example);
 
@@ -28,7 +28,9 @@ public interface MachineroomMapper {
 
     int updateByPrimaryKey(Machineroom record);
 
-    List<Machineroom> queryAllRooms(String userId);
+    List<Machineroom> queryAllRooms(int userId);
 
-    List<String> queryAllRoomIds(String userId);
+    List<String> queryAllRoomIds(int userId);
+
+    Machineroom selectByRoomname(String roomName);
 }

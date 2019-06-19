@@ -9,7 +9,7 @@ public interface UserService {
 
     int insertUser(User user);
 
-    int deleteUserById(String id);
+    int deleteUserById(int id);
 
     int updateUser(User user);
 
@@ -17,7 +17,9 @@ public interface UserService {
 
     List<User> queryAllUser();
 
-    User selectByPrimaryKey(String userId);
+    User selectByPrimaryKey(int userId);
+
+    int selectUseridByUsername(String userName);
 
 
 }

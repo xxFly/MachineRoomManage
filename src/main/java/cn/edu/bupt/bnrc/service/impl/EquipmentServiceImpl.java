@@ -11,6 +11,7 @@ import java.util.List;
 
 @Service
 public class EquipmentServiceImpl implements EquipmentService {
+
     @Autowired
     private EquipmentMapper equipmentMapper;
     @Override
@@ -19,8 +20,8 @@ public class EquipmentServiceImpl implements EquipmentService {
     }
 
     @Override
-    public int deleteEquipmentById(String equipId) {
-        return equipmentMapper.deleteByPrimaryKey(equipId);
+    public int deleteEquipmentById(int equipmentId) {
+        return equipmentMapper.deleteByPrimaryKey(equipmentId);
     }
 
     @Override
@@ -29,7 +30,7 @@ public class EquipmentServiceImpl implements EquipmentService {
     }
 
     @Override
-    public Equipment selectByEquipmentId(String equipmentId) {
+    public Equipment selectByEquipmentId(int equipmentId) {
         return equipmentMapper.selectByPrimaryKey(equipmentId);
     }
 
@@ -37,6 +38,11 @@ public class EquipmentServiceImpl implements EquipmentService {
     @Override
     public List<Equipment> queryByRoomIds(List machineRoomIdList) {
         return equipmentMapper.queryByRoomIds(machineRoomIdList);
+    }
+
+    @Override
+    public Equipment checkExist(int mrId, int cabId, String equipName) {
+        return equipmentMapper.checkExist(mrId, cabId, equipName);
     }
 
 }
