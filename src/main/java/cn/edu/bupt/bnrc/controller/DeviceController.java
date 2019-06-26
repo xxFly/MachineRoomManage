@@ -76,9 +76,9 @@ public class DeviceController {
             System.out.println("----------------------------3"+value);
 
             // 生成jpeg图片
-//            String basePath = "/diskb/fxx/machineroom/";
-//            String imgFilePath = basePath + timeStamp+".jpg";// 新生成的图片
-            String imgFilePath = timeStamp+".jpg";// 新生成的图片
+            String basePath = "/diskb/fxx/machineroom/";
+            String imgFilePath = basePath + timeStamp+".jpg";// 新生成的图片
+//            String imgFilePath = timeStamp+".jpg";// 新生成的图片
             OutputStream out = new FileOutputStream(imgFilePath);
             out.write(b);
             out.flush();

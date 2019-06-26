@@ -17,7 +17,7 @@ public class DetectMqServiceImpl implements DetectMqService {
     public void sendMessage(Object message) {
         System.out.println("---------------------send message:"+ message);
 //        System.out.println("---------------------send message:"+ message.toString());
-//        amqpTemplate.convertAndSend("detectRequestQueueKey",message);
-        amqpTemplate.convertAndSend("clientRequestQueueKey",message);
+        amqpTemplate.convertAndSend("detectRequestQueueKey",message);
+//        amqpTemplate.convertAndSend("clientRequestQueueKey",message);
     }
 }
