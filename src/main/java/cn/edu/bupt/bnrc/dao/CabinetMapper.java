@@ -30,4 +30,6 @@ public interface CabinetMapper {
     int updateByPrimaryKey(Cabinet record);
 
     int getIdByRoomidAndCabname(@Param("mrId")int mrId, @Param("cabName")String cabName);
+
+    List queryCabinetMap();
 }

@@ -96,6 +96,12 @@
     where cab_id = #{cabId,jdbcType=INTEGER}
   </select>
 
+  <select id="queryCabinetMap" >
+    select
+    cab_id,cab_name
+    from cabinet
+  </select>
+
   <select id="getIdByRoomidAndCabname" resultType="java.lang.Integer" >
     select
     cab_id

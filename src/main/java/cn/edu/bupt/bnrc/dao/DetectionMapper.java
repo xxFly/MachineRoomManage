@@ -12,7 +12,7 @@ public interface DetectionMapper {
 
     int deleteByPrimaryKey(Integer detectId);
 
-    int insert(Detection record);
+    int insert(@Param("entity")Detection record);
 
     int insertSelective(Detection record);
 
@@ -35,4 +35,6 @@ public interface DetectionMapper {
     List<Detection> selectByUserId (int userId);
 
     int deleteByUserAndTime(@Param("userId")int userId, @Param("detectTime")String detectTime);
+
+    List<Detection> selectByDetectId( @Param("detectTime")String detectTime);
 }

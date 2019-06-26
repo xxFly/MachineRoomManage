@@ -15,6 +15,22 @@ public class Detection {
 
     private String detectExtra;
 
+    public Detection() {
+    }
+
+    @Override
+    public String toString() {
+        return "Detection{" +
+                "detectId=" + detectId +
+                ", userId=" + userId +
+                ", detectBrand='" + detectBrand + '\'' +
+                ", detectVersion='" + detectVersion + '\'' +
+                ", detectLocation='" + detectLocation + '\'' +
+                ", detectTime='" + detectTime + '\'' +
+                ", detectExtra='" + detectExtra + '\'' +
+                '}';
+    }
+
     public Detection(Integer detectId, Integer userId, String detectBrand, String detectVersion, String detectLocation, String detectTime, String detectExtra) {
         this.detectId = detectId;
         this.userId = userId;

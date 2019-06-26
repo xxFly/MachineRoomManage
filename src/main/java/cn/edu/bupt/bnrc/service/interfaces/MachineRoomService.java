@@ -17,4 +17,8 @@ public interface MachineRoomService {
 
     List<String> queryAllRoomIds(int userId);
 
+    List queryMachineMap();
+
+
+
 }

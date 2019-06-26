@@ -92,12 +92,6 @@
     where detect_id = #{detectId,jdbcType=INTEGER}
   </select>
 
-  <select id="selectByDetectTime" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select
-    <include refid="Base_Column_List" />
-    from detection
-    where detect_time = #{detectExtra,jdbcType=VARCHAR}
-  </select>
   <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
@@ -109,6 +103,12 @@
     <include refid="Base_Column_List" />
     from detection
     where user_id = #{userId,jdbcType=INTEGER} and detect_time like #{detectTime,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByDetectId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from detection
+    where detect_time like #{detectTime,jdbcType=VARCHAR}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
@@ -128,14 +128,17 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="cn.edu.bupt.bnrc.pojo.Detection" >
-    insert into detection (detect_id, user_id, detect_brand, 
+
+  <insert id="insert" parameterType="cn.edu.bupt.bnrc.pojo.Detection" useGeneratedKeys="true" keyProperty="entity.detectId" keyColumn="detect_id">
+    insert into detection (user_id, detect_brand,
       detect_version, detect_location, detect_time, 
       detect_extra)
-    values (#{detectId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{detectBrand,jdbcType=VARCHAR}, 
-      #{detectVersion,jdbcType=VARCHAR}, #{detectLocation,jdbcType=VARCHAR}, #{detectTime,jdbcType=VARCHAR}, 
-      #{detectExtra,jdbcType=VARCHAR})
+    values ( #{entity.userId,jdbcType=INTEGER}, #{entity.detectBrand,jdbcType=VARCHAR},
+      #{entity.detectVersion,jdbcType=VARCHAR}, #{entity.detectLocation,jdbcType=VARCHAR}, #{entity.detectTime,jdbcType=VARCHAR},
+      #{entity.detectExtra,jdbcType=VARCHAR})
   </insert>
+
+
   <insert id="insertSelective" parameterType="cn.edu.bupt.bnrc.pojo.Detection" >
     insert into detection
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -249,7 +252,7 @@
         detect_location = #{detectLocation,jdbcType=VARCHAR},
       </if>
       <if test="detectTime != null" >
-        detect_time = #{detectTime,jdbcType=VARCHAR},
+        detect_time = concat(detect_time, #{detectTime,jdbcType=VARCHAR}),
       </if>
       <if test="detectExtra != null" >
         detect_extra = #{detectExtra,jdbcType=VARCHAR},

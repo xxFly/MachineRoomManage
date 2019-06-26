@@ -5,10 +5,12 @@ import cn.edu.bupt.bnrc.pojo.Detection;
 import java.util.List;
 
 
-public interface EquipmentDetectionService {
+public interface DetectionService {
     int insertEquipmentDetection(Detection equipmentDetection);
 
     List<Detection> selectByUserAndDetectTime(int userId, String detectTime);
+
+    List<Detection> selectByDetectId(String detectTime);
 
     int updateByPrimaryKey(Detection equipmentDetection);
 
@@ -19,4 +21,8 @@ public interface EquipmentDetectionService {
     int deleteByUserAndTime(int userId,String detectTime);
 
     List<Detection> queryEquipmentByUser(int userId);
+
+    int updateByPrimaryKeySelective(Detection record);
+
+    Detection selectByPrimaryKey(Integer detectId);
 }

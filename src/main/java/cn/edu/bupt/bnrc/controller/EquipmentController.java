@@ -129,7 +129,6 @@ public class EquipmentController {
         }else {
             value = "该设备已存在";
         }
-
         map.put(key,value);
         return map;
     }

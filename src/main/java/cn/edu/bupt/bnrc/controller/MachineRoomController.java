@@ -3,9 +3,11 @@ package cn.edu.bupt.bnrc.controller;
 import cn.edu.bupt.bnrc.pojo.Equipment;
 import cn.edu.bupt.bnrc.pojo.Machineroom;
 import cn.edu.bupt.bnrc.pojo.User;
+import cn.edu.bupt.bnrc.service.impl.CabinetServiceImpl;
 import cn.edu.bupt.bnrc.service.impl.EquipmentServiceImpl;
 import cn.edu.bupt.bnrc.service.impl.MachineRoomServiceImpl;
 import cn.edu.bupt.bnrc.service.impl.UserServiceImpl;
+import cn.edu.bupt.bnrc.service.interfaces.CabinetService;
 import cn.edu.bupt.bnrc.service.interfaces.EquipmentService;
 import cn.edu.bupt.bnrc.service.interfaces.MachineRoomService;
 import cn.edu.bupt.bnrc.service.interfaces.UserService;
@@ -35,6 +37,9 @@ public class MachineRoomController {
     @Autowired
     private UserService userService = new UserServiceImpl();
 
+    @Autowired
+    private CabinetService cabinetService = new CabinetServiceImpl();
+
 
 
     @RequestMapping("/queryAllRoomsAndCabinet")
@@ -53,6 +58,25 @@ public class MachineRoomController {
         List<Equipment> equipmentList = equipmentService.queryByRoomIds(machineroomIdList);
         result.put("machineroomList",machineroomList);
         result.put("equipmentList",equipmentList);
+//        System.out.println(equipmentList.get(0));
+        return result;
+    }
+
+    @RequestMapping("/queryMachineAndCabMap")
+    @ResponseBody
+    @CrossOrigin
+    public Map<String, Object> queryMachineAndCabMap(HttpServletRequest request){
+        Map<String,Object> result = new HashMap<>();
+
+        List machineMap = machineRoomService.queryMachineMap();
+        List cabinetMap = cabinetService.queryCabinetMap();
+//        System.out.println(machineroomIdList.get(0));
+//        List list = new ArrayList<>();
+//        list.add("001");
+//        list.add("002");
+//        List<Equipment> equipmentList = equipmentService.queryByRoomIds(machineMap);
+        result.put("machineroomMap",machineMap);
+        result.put("cabinetMap",cabinetMap);
 //        System.out.println(equipmentList.get(0));
         return result;
     }

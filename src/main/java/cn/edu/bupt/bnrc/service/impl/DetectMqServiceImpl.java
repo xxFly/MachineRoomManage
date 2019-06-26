@@ -1,15 +1,14 @@
 package cn.edu.bupt.bnrc.service.impl;
 
-import cn.edu.bupt.bnrc.service.interfaces.MqTest;
+import cn.edu.bupt.bnrc.service.interfaces.DetectMqService;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 
-//public class MqTestImpl{
+//public class DetectMqServiceImpl{
 @Service
-public class MqTestImpl implements MqTest {
+public class DetectMqServiceImpl implements DetectMqService {
 
     @Resource(name = "amqpTemplate")
     private AmqpTemplate amqpTemplate;
@@ -18,6 +17,7 @@ public class MqTestImpl implements MqTest {
     public void sendMessage(Object message) {
         System.out.println("---------------------send message:"+ message);
 //        System.out.println("---------------------send message:"+ message.toString());
+//        amqpTemplate.convertAndSend("detectRequestQueueKey",message);
         amqpTemplate.convertAndSend("clientRequestQueueKey",message);
     }
 }

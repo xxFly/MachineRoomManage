@@ -216,6 +216,12 @@
     from machineroom
     where mr_name = #{mrName,jdbcType=VARCHAR}
   </select>
+  <select id="queryMachineMap" >
+    select
+    mr_id,mr_name
+    from machineroom
+  </select>
+
 
 
   <update id="updateByExampleSelective" parameterType="map" >

@@ -33,4 +33,8 @@ public interface MachineroomMapper {
     List<String> queryAllRoomIds(int userId);
 
     Machineroom selectByRoomname(String roomName);
+
+    List queryMachineMap();
+
+
 }

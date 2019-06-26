@@ -14,6 +14,13 @@ public class MachineRoomServiceImpl implements MachineRoomService {
     private MachineroomMapper machineroomMapper ;
 
     @Override
+    public List queryMachineMap() {
+        return machineroomMapper.queryMachineMap();
+    }
+
+
+
+    @Override
     public int insertRoom(Machineroom machineroom) {
         return machineroomMapper.insert(machineroom);
     }

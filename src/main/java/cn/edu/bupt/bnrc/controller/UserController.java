@@ -1,32 +1,27 @@
 package cn.edu.bupt.bnrc.controller;
 
 import cn.edu.bupt.bnrc.pojo.User;
-import cn.edu.bupt.bnrc.service.impl.MqTestImpl;
+import cn.edu.bupt.bnrc.service.impl.DetectMqServiceImpl;
 import cn.edu.bupt.bnrc.service.impl.UserServiceImpl;
-import cn.edu.bupt.bnrc.service.interfaces.MqTest;
+import cn.edu.bupt.bnrc.service.interfaces.DetectMqService;
 import cn.edu.bupt.bnrc.service.interfaces.UserService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 @Controller
 @RequestMapping("/user")
@@ -34,7 +29,7 @@ public class UserController {
 
     // 注入消息生产者
     @Autowired
-    private MqTest mqTest = new MqTestImpl();
+    private DetectMqService detectMqService = new DetectMqServiceImpl();
 
     @Autowired
     private UserService userService = new UserServiceImpl();
@@ -168,7 +163,7 @@ public class UserController {
 //        System.out.println("----------controller send :"+bytes);
 //        amqpTemplate.convertAndSend("exchange","topic.messages",bytes);
 //        byte[] bytes=getBytesFromObject(user);
-//        mqTest.sendMessage(bytes);
+//        detectMqService.sendMessage(bytes);
         return result;
     }
 

@@ -3,7 +3,7 @@ package cn.edu.bupt.bnrc.controller;
 import cn.edu.bupt.bnrc.pojo.Detection;
 import cn.edu.bupt.bnrc.pojo.Equipment;
 import cn.edu.bupt.bnrc.pojo.Machineroom;
-import cn.edu.bupt.bnrc.service.impl.EquipmentDetectionServiceImpl;
+import cn.edu.bupt.bnrc.service.impl.DetectionServiceImpl;
 import cn.edu.bupt.bnrc.service.impl.EquipmentServiceImpl;
 import cn.edu.bupt.bnrc.service.interfaces.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.Map;
 @RequestMapping("/equipmentDetection")
 public class EquipmentDetectionController {
     @Autowired
-    private EquipmentDetectionService equipmentDetectionService = new EquipmentDetectionServiceImpl();
+    private DetectionService detectionService = new DetectionServiceImpl();
     @Autowired
     private EquipmentService equipmentService = new EquipmentServiceImpl();
     @Autowired
@@ -34,14 +34,17 @@ public class EquipmentDetectionController {
     @RequestMapping("/queryEquipment")
     @ResponseBody
     @CrossOrigin
-    public Map<String, List<Detection>> queryEquipment(String userName, String detectTime){
+    public Map<String, List<Detection>> queryEquipment(String userName, String detectId){
         Map<String, List<Detection>> map = new HashMap<>();
         int userId = userService.selectUseridByUsername(userName);
-        List<Detection> equipmentDetection = equipmentDetectionService.selectByUserAndDetectTime(userId,detectTime+"%");
-        System.out.println("-----------detectTime"+detectTime);
-        System.out.println(equipmentDetection.toString());
+//        int detectKey = Integer.parseInt(detectId);
+        String detectTime = "%\\_" + detectId + "\\_%";
+        List<Detection> detection = detectionService.selectByDetectId(detectTime);
+//        List<Detection> equipmentDetection = detectionService.selectByUserAndDetectTime(userId,detectTime+"%");
+//        System.out.println("-----------detectTime"+detectTime);
+        System.out.println(detection.toString());
         String key = "equipmentDetection";
-        map.put(key,equipmentDetection);
+        map.put(key,detection);
         return map;
     }
 
@@ -88,7 +91,7 @@ public class EquipmentDetectionController {
         if(eq == null){
             try{
                 equipmentService.insertEquipment(equipment);
-                equipmentDetectionService.updateByDetection(equipmentDetection);
+                detectionService.updateByDetection(equipmentDetection);
                 value = "true";
             }catch (Exception e){
                 value = "修改失败";
@@ -96,7 +99,7 @@ public class EquipmentDetectionController {
         }else {
             try{
                 equipmentService.updateEquipment(equipment);
-                equipmentDetectionService.updateByDetection(equipmentDetection);
+                detectionService.updateByDetection(equipmentDetection);
                 value = "true";
             }catch (Exception e){
                 value = "修改失败";
@@ -119,7 +122,7 @@ public class EquipmentDetectionController {
         String key = "result";
         String value ;
         try {
-            equipmentDetectionService.deleteByUserAndTime(userId,detectTime);
+            detectionService.deleteByUserAndTime(userId,detectTime);
             value = "true";
         }catch (Exception e){
             value = "false";
@@ -135,7 +138,7 @@ public class EquipmentDetectionController {
         int userId = userService.selectUseridByUsername(userName);
         Map<String,List<Detection>> map = new HashMap<>();
         String key = "equipmentDetectionList";
-        List<Detection> equipmentDetectionList = equipmentDetectionService.queryEquipmentByUser(userId);
+        List<Detection> equipmentDetectionList = detectionService.queryEquipmentByUser(userId);
         map.put(key,equipmentDetectionList);
         return map;
     }
